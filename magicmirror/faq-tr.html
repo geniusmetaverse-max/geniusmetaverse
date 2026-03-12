@@ -10,7 +10,7 @@
       max-width: 900px;
       margin: 40px auto;
       padding: 20px 20px 60px;
-      line-height: 1.7;
+      line-height: 1.6;          /* 1.7 → 1.6 daha sıkı okuma */
       color: #333;
       background-color: #fff;
     }
@@ -19,11 +19,11 @@
       text-align: center;
       border-bottom: 2px solid #eee;
       padding-bottom: 15px;
-      margin-bottom: 40px;
+      margin-bottom: 35px;       /* 40px → 35px */
       font-size: 2.5rem;
     }
     .accordion {
-      margin-bottom: 16px;
+      margin-bottom: 6px;         /* 16px → 6px (en büyük fark buradan) */
       border-bottom: 1px solid #eee;
     }
     .question {
@@ -31,9 +31,9 @@
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-      padding: 14px 0;
+      padding: 12px 0;            /* 14px → 12px */
       font-weight: bold;
-      font-size: 1.1rem; /* Font küçültülmüş hali */
+      font-size: 1.1rem;
       color: #000;
       transition: color 0.3s;
     }
@@ -58,11 +58,11 @@
     }
     .answer.active {
       max-height: 1200px;
-      padding: 12px 15px;
+      padding: 8px 15px;          /* 12px → 8px (cevap bloğu daha kompakt) */
     }
     p {
-      margin: 12px 0;
-      font-size: 1.05rem; /* Cevap fontu hafif küçültülmüş */
+      margin: 8px 0;              /* 12px → 8px */
+      font-size: 1.05rem;
     }
     strong {
       color: #000;
@@ -76,8 +76,8 @@
     }
     .footer {
       text-align: center;
-      margin-top: 60px;
-      padding-top: 30px;
+      margin-top: 50px;           /* 60px → 50px */
+      padding-top: 25px;
       border-top: 1px solid #eee;
       font-size: 0.95rem;
       color: #666;
@@ -90,7 +90,6 @@
   </style>
 </head>
 <body>
-
   <h1>Sık Sorulan Sorular</h1>
 
   <div class="accordion">
@@ -117,7 +116,7 @@
   <div class="accordion">
     <div class="question">4. Görsellerimi kaydedebilir miyim?</div>
     <div class="answer">
-      <p>Evet. Tüm ücretli paket seçenekleri dahilinde ürettiğiniz görselleri Watermark-Free olarak telefonunuza kaydedebilirsiniz.</p>
+      <p>Evet. Tüm ücretli paket seçenekleri dahilinde ürettiğiniz görselleri filigransız olarak telefonunuza kaydedebilirsiniz.</p>
     </div>
   </div>
 
@@ -131,7 +130,7 @@
   <div class="accordion">
     <div class="question">6. Paket satın almak için neden giriş yapmalıyım?</div>
     <div class="answer">
-      <p>Google/Apple hesabınızla giriş yaptığınızda hem verileriniz hem de sahip olduğunuz tüm krediler güvenli şekilde hesabınıza bağlanır. Uygulamayı silseniz, cihazınızı değiştirseniz veya verileri temizleseniz bile tüm haklarınız sizinle birlikte kalır. Tek bir girişle denemeleriniz ve paketleriniz her zaman güvende olur, hiçbir şey kaybolmaz.</p>
+      <p>Google/Apple hesabınızla giriş yaptığınızda hem verileriniz hem de sahip olduğunuz tüm krediler güvenli şekilde hesabınıza bağlanır. Uygulamayı silmeniz, cihazınızı değiştirmeseniz veya verileri temizlemeniz durumunda bile tüm haklarınız sizinle birlikte kalır. Tek bir girişle denemeleriniz ve paketleriniz her zaman güvende olur, hiçbir şey kaybolmaz.</p>
     </div>
   </div>
 
@@ -145,7 +144,7 @@
   <div class="accordion">
     <div class="question">8. Ücretsizden sonra nasıl devam edebilirim?</div>
     <div class="answer">
-      <p>İlk denemeden sonra her yeni görsel için bir reklam izleyebilir veya alternatif olarak, size en uygun olduğunu düşündüğünüz paketlerden satın alarak ayrıcalıklı stil ve tarzlara erişim sağlarken reklamsız harika görseller üretmeye devam edebilirsiniz.</p>
+      <p>İlk denemeden sonra her yeni görsel için bir reklam izleyebilir veya alternatif olarak, size en uygun olduğunu düşündüğünüz planlardan birini satın alarak ayrıcalıklı stil ve tarzlara erişim sağlarken reklamsız harika görseller üretmeye devam edebilirsiniz.</p>
     </div>
   </div>
 
@@ -173,7 +172,7 @@
         const accordion = question.parentElement;
         const answer = accordion.querySelector('.answer');
         
-        // Diğer açık akordionları kapat (isteğe bağlı)
+        // Diğer açık olanları kapat
         document.querySelectorAll('.accordion.active').forEach(item => {
           if (item !== accordion) {
             item.classList.remove('active');
@@ -182,13 +181,12 @@
           }
         });
 
-        // Tıklanan akordionu aç/kapat
+        // Tıklanan akordionu toggle
         accordion.classList.toggle('active');
         answer.classList.toggle('active');
         question.classList.toggle('active');
       });
     });
   </script>
-
 </body>
 </html>
