@@ -10,7 +10,7 @@
       max-width: 900px;
       margin: 40px auto;
       padding: 20px 20px 60px;
-      line-height: 1.7;
+      line-height: 1.6;          /* 1.7 → 1.6 biraz daha sıkı */
       color: #333;
       background-color: #fff;
     }
@@ -19,11 +19,11 @@
       text-align: center;
       border-bottom: 2px solid #eee;
       padding-bottom: 15px;
-      margin-bottom: 40px;
+      margin-bottom: 35px;       /* 40px → 35px */
       font-size: 2.5rem;
     }
     .accordion {
-      margin-bottom: 16px;
+      margin-bottom: 6px;         /* 16px → 6px  (en büyük fark buradan gelecek) */
       border-bottom: 1px solid #eee;
     }
     .question {
@@ -31,9 +31,9 @@
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-      padding: 14px 0;
+      padding: 12px 0;            /* 14px → 12px */
       font-weight: bold;
-      font-size: 1.1rem; /* Fontu biraz küçülttük */
+      font-size: 1.1rem;
       color: #000;
       transition: color 0.3s;
     }
@@ -57,12 +57,12 @@
       padding: 0 15px;
     }
     .answer.active {
-      max-height: 1200px; /* İçerik için yeterli */
-      padding: 12px 15px; /* Boşlukları biraz daralttık */
+      max-height: 1200px;
+      padding: 8px 15px;          /* 12px → 8px  (cevap bloğu daha sıkı) */
     }
     p {
-      margin: 12px 0;
-      font-size: 1.05rem; /* Cevap fontu da hafif küçültüldü */
+      margin: 8px 0;              /* 12px → 8px  (paragraflar arası boşluk azalır) */
+      font-size: 1.05rem;
     }
     strong {
       color: #000;
@@ -76,8 +76,8 @@
     }
     .footer {
       text-align: center;
-      margin-top: 60px;
-      padding-top: 30px;
+      margin-top: 50px;           /* 60px → 50px */
+      padding-top: 25px;
       border-top: 1px solid #eee;
       font-size: 0.95rem;
       color: #666;
@@ -90,7 +90,6 @@
   </style>
 </head>
 <body>
-
   <h1>Frequently Asked Questions</h1>
 
   <div class="accordion">
@@ -173,7 +172,7 @@
         const accordion = question.parentElement;
         const answer = accordion.querySelector('.answer');
         
-        // Diğer açık akordionları kapat (opsiyonel, sadece bir tane açık olsun)
+        // Diğer açık olanları kapat
         document.querySelectorAll('.accordion.active').forEach(item => {
           if (item !== accordion) {
             item.classList.remove('active');
@@ -182,13 +181,12 @@
           }
         });
 
-        // Tıklanan akordionu aç/kapat
+        // Tıklanan akordionu toggle
         accordion.classList.toggle('active');
         answer.classList.toggle('active');
         question.classList.toggle('active');
       });
     });
   </script>
-
 </body>
 </html>
