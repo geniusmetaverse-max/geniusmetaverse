@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planları Karşılaştır – Magic Mirror</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.55;
+      color: #222;
+      background: #fafafa;
+    }
+    h1 {
+      text-align: center;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #555;
+      font-size: 1.1em;
+      margin-bottom: 50px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid #e8e8e8;
+      vertical-align: top;
+    }
+    th {
+      background: #f0f4ff;
+      font-weight: bold;
+      color: #1a237e;
+      text-align: center;
+      font-size: 1.15em;
+    }
+    .plan-subtitle {
+      font-size: 0.95em;
+      color: #555;
+      font-weight: normal;
+      display: block;
+      margin-top: 6px;
+    }
+    .feature-name {
+      font-weight: 600;
+      color: #333;
+      min-width: 240px;
+    }
+    .upgrade-radiance {
+      font-weight: bold;
+      color: #1976d2;          /* mavi - Radiance ekstra */
+    }
+    .upgrade-majesty {
+      font-weight: bold;
+      color: #2e7d32;          /* yeşil - Majesty ekstra */
+    }
+    .limited {
+      color: #757575;
+      font-style: italic;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .section-title {
+      background: #e3f2fd;
+      font-weight: bold;
+      color: #1565c0;
+      text-align: center;
+      font-size: 1.1em;
+      padding: 20px 16px 12px;
+    }
+    @media (max-width: 800px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      th, td {
+        text-align: left !important;
+      }
+      th {
+        background: #e3f2fd;
+      }
+      tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      .feature-name {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Magic Mirror Planlarını Karşılaştır</h1>
+  <p class="subtitle">Her pakette tam olarak neler aldığınızı yan yana görün</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>
+          Sparkle<br>
+          <span class="plan-subtitle">Erişilebilir zarif</span>
+        </th>
+        <th>
+          Radiance<br>
+          <span class="plan-subtitle">Daha fazla ayrıcalık ve parlaklık</span>
+        </th>
+        <th>
+          Majesty<br>
+          <span class="plan-subtitle">Özel haute couture deneyimi</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="feature-name">AI Üretimi</td>
+        <td>5</td>
+        <td><span class="upgrade-radiance">10</span></td>
+        <td><span class="upgrade-majesty">20</span></td>
+      </tr>
+      <tr>
+        <td class="feature-name">Profil Entegrasyonu</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>✔</td>
+      </tr>
+      <tr>
+        <td class="feature-name">Kişiselleştirilmiş Ölçüler</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>✔</td>
+      </tr>
+      <tr>
+        <td class="feature-name">Kaydet & Paylaş Özelliği</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>✔</td>
+      </tr>
+      <tr>
+        <td class="feature-name">Filigransız</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>✔</td>
+      </tr>
+      <tr>
+        <td class="feature-name">Reklamsız</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>✔</td>
+      </tr>
+      <tr>
+        <td class="feature-name">Çözünürlük</td>
+        <td>Standart</td>
+        <td><span class="upgrade-radiance">HD</span></td>
+        <td><span class="upgrade-majesty">Ultra HD</span></td>
+      </tr>
+      <tr>
+        <td class="feature-name">Sıra</td>
+        <td>Standart</td>
+        <td><span class="upgrade-radiance">Öncelikli</span></td>
+        <td><span class="upgrade-majesty">Öncelikli</span></td>
+      </tr>
+      <tr>
+        <td class="feature-name">Siluet</td>
+        <td><span class="limited">Sınırlı</span></td>
+        <td><span class="upgrade-radiance">Açık</span></td>
+        <td><span class="upgrade-majesty">Açık</span></td>
+      </tr>
+      <tr>
+        <td class="feature-name">Mod</td>
+        <td><span class="limited">Sınırlı</span></td>
+        <td><span class="limited">Sınırlı</span></td>
+        <td><span class="upgrade-majesty">Açık</span></td>
+      </tr>
+
+      <!-- Mevcut Siluet & Mod bölümü -->
+      <tr><td colspan="4" class="section-title">Mevcut Siluet & Mod</td></tr>
+
+      <tr>
+        <td class="feature-name">Siluet</td>
+        <td>
+          A-Line, Empire Waist, Mini,<br>Tea-Length, Trumpet
+        </td>
+        <td>
+          <span class="upgrade-radiance">+ Column, Mermaid, Princess</span>
+        </td>
+        <td>
+          <span class="upgrade-majesty">All Silhouette Unlocked</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="feature-name">Mod</td>
+        <td>
+          Avant-garde, Beach, Classic,<br>Ethereal, Modern, Modest, Vintage
+        </td>
+        <td>
+          <span class="upgrade-radiance">+ Bohemian, Glamorous</span>
+        </td>
+        <td>
+          <span class="upgrade-majesty">+ Quiet Luxury, Romantic, Royal</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
