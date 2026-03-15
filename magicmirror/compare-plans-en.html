@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Plans - Magic Mirror</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px 20px 60px;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #222;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 1.1em;
+      margin-bottom: 40px;
+    }
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .plan-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 320px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+    .plan-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    .plan-header {
+      padding: 30px 20px 20px;
+      text-align: center;
+      color: white;
+    }
+    .plan-name {
+      font-size: 1.8em;
+      margin: 0;
+    }
+    .plan-price {
+      font-size: 2.8em;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .plan-price small {
+      font-size: 0.5em;
+      vertical-align: super;
+    }
+    .popular .plan-header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+    .popular::after {
+      content: "Most Popular";
+      position: absolute;
+      top: 20px;
+      right: -45px;
+      background: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      padding: 6px 50px;
+      transform: rotate(45deg);
+      font-size: 0.9em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .features {
+      padding: 25px 20px;
+      list-style: none;
+      margin: 0;
+    }
+    .features li {
+      margin: 12px 0;
+      font-size: 1.05em;
+    }
+    .features li::before {
+      content: "✔ ";
+      color: #4caf50;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    .most-popular-note {
+      text-align: center;
+      margin: 30px 0;
+      font-style: italic;
+      color: #555;
+    }
+    .silhouette-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 40px 0;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .silhouette-table th, .silhouette-table td {
+      padding: 14px 20px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    .silhouette-table th {
+      background: #f0f4ff;
+      font-weight: bold;
+    }
+    .highlight {
+      background: #f8faff;
+      font-weight: 600;
+    }
+    @media (max-width: 900px) {
+      .pricing-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .plan-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Compare Magic Mirror Plans</h1>
+  <p class="subtitle">Side-by-side comparison – Find the perfect tier for your creative visions</p>
+
+  <div class="pricing-container">
+
+    <div class="plan-card">
+      <div class="plan-header" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+        <h2 class="plan-name">Sparkle</h2>
+        <div class="plan-price">$7.99<small>/mo</small></div>
+      </div>
+      <ul class="features">
+        <li>5 AI Generations</li>
+        <li>Profile integration & Measurements</li>
+        <li>Save & Share Feature</li>
+        <li>Watermark-Free</li>
+        <li>Ad-Free Experience</li>
+        <li>Standard Resolution</li>
+        <li>Standard Queue</li>
+        <li>Limited Silhouette</li>
+        <li>Limited Mood</li>
+        <li>Start Sparkle – Twice the magic, smarter price</li>
+      </ul>
+    </div>
+
+    <div class="plan-card popular">
+      <div class="plan-header" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">
+        <h2 class="plan-name">Radiance</h2>
+        <div class="plan-price">$12.99<small>/mo</small></div>
+      </div>
+      <ul class="features">
+        <li>10 AI Generations</li>
+        <li>Profile integration & Measurements</li>
+        <li>Save & Share Feature</li>
+        <li>Watermark-Free</li>
+        <li>Ad-Free Experience</li>
+        <li>HD Resolution</li>
+        <li>Priority Queue</li>
+        <li>All Silhouettes Unlocked</li>
+        <li>Limited Mood</li>
+        <li>Join Radiance – Save $, smarter price</li>
+      </ul>
+    </div>
+
+    <div class="plan-card">
+      <div class="plan-header" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
+        <h2 class="plan-name">Majesty</h2>
+        <div class="plan-price">$19.99<small>/mo</small></div>
+      </div>
+      <ul class="features">
+        <li>20 AI Generations</li>
+        <li>Profile integration & Measurements</li>
+        <li>Save & Share Feature</li>
+        <li>Ad-Free</li>
+        <li>Ultra HD Resolution</li>
+        <li>Priority Queue</li>
+        <li>All Silhouettes Unlocked</li>
+        <li>All Moods Unlocked</li>
+        <li>Ultimate luxury, unbeatable value – Save 37%</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p class="most-popular-note">Radiance is our most popular plan – the perfect balance of features & value!</p>
+
+  <h2>Available Silhouettes & Moods by Plan</h2>
+
+  <table class="silhouette-table">
+    <thead>
+      <tr>
+        <th>Plan</th>
+        <th>Silhouettes</th>
+        <th>Moods</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Sparkle</strong></td>
+        <td>Limited Silhouette</td>
+        <td>Limited Mood: Avant-garde, Beach, Classic</td>
+      </tr>
+      <tr class="highlight">
+        <td><strong>Radiance</strong></td>
+        <td>All Silhouettes Unlocked<br>(A-Line, Waist, Mini, Princess, Empire, Mermaid, Column, Tea-Length, Trumpet...)</td>
+        <td>Limited Mood: Avant-garde, Beach, Bohemian, Classic, Ethereal, Glamorous, Modern, Modest</td>
+      </tr>
+      <tr>
+        <td><strong>Majesty</strong></td>
+        <td>All Silhouettes Unlocked</td>
+        <td>All Moods Unlocked: Avant-garde, Beach, Bohemian, Classic, Ethereal, Glamorous, Modern, Modest, Vintage, Quiet Luxury, Romantic, Royal...</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
