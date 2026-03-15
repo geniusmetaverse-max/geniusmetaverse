@@ -3,133 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compare Plans - Magic Mirror</title>
+  <title>Compare Plans – Magic Mirror</title>
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 40px auto;
-      padding: 20px 20px 60px;
-      line-height: 1.6;
-      color: #333;
-      background: #f9f9f9;
-    }
-    h1, h2 {
-      text-align: center;
+      padding: 20px;
+      line-height: 1.55;
       color: #222;
+      background: #fafafa;
     }
     h1 {
-      margin-bottom: 10px;
+      text-align: center;
+      color: #1a1a1a;
+      margin-bottom: 8px;
     }
     .subtitle {
       text-align: center;
-      color: #666;
+      color: #555;
       font-size: 1.1em;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
-    .pricing-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-    .plan-card {
+    table {
+      width: 100%;
+      border-collapse: collapse;
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      border-radius: 10px;
       overflow: hidden;
-      width: 320px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
     }
-    .plan-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    th, td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid #e8e8e8;
+      vertical-align: top;
     }
-    .plan-header {
-      padding: 30px 20px 20px;
-      text-align: center;
-      color: white;
-    }
-    .plan-name {
-      font-size: 1.8em;
-      margin: 0;
-    }
-    .plan-price {
-      font-size: 2.8em;
+    th {
+      background: #f0f4ff;
       font-weight: bold;
-      margin: 10px 0;
+      color: #1a237e;
+      text-align: center;
+      font-size: 1.15em;
     }
-    .plan-price small {
-      font-size: 0.5em;
-      vertical-align: super;
+    .plan-subtitle {
+      font-size: 0.95em;
+      color: #555;
+      font-weight: normal;
+      display: block;
+      margin-top: 6px;
     }
-    .popular .plan-header {
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    .popular {
+      position: relative;
     }
     .popular::after {
       content: "Most Popular";
       position: absolute;
-      top: 20px;
-      right: -45px;
-      background: #ffcc00;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffca28;
       color: #000;
+      font-size: 0.8em;
       font-weight: bold;
-      padding: 6px 50px;
-      transform: rotate(45deg);
-      font-size: 0.9em;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    .features {
-      padding: 25px 20px;
-      list-style: none;
-      margin: 0;
-    }
-    .features li {
-      margin: 12px 0;
-      font-size: 1.05em;
-    }
-    .features li::before {
-      content: "✔ ";
-      color: #4caf50;
-      font-weight: bold;
-      margin-right: 8px;
-    }
-    .most-popular-note {
-      text-align: center;
-      margin: 30px 0;
-      font-style: italic;
-      color: #555;
-    }
-    .silhouette-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 40px 0;
-      background: white;
+      padding: 4px 12px;
       border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      white-space: nowrap;
     }
-    .silhouette-table th, .silhouette-table td {
-      padding: 14px 20px;
-      text-align: left;
-      border-bottom: 1px solid #eee;
-    }
-    .silhouette-table th {
-      background: #f0f4ff;
-      font-weight: bold;
-    }
-    .highlight {
-      background: #f8faff;
+    .feature-name {
       font-weight: 600;
+      color: #333;
+      min-width: 240px;
     }
-    @media (max-width: 900px) {
-      .pricing-container {
-        flex-direction: column;
-        align-items: center;
+    .upgrade {
+      font-weight: bold;
+      color: #d32f2f;          /* kırmızı - üst plana özgü / ekstra */
+    }
+    .limited {
+      color: #757575;
+      font-style: italic;
+    }
+    .all-unlocked {
+      font-weight: bold;
+      color: #2e7d32;         /* yeşil ton - unlocked vurgusu */
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .section-title {
+      background: #e3f2fd;
+      font-weight: bold;
+      color: #1565c0;
+      text-align: center;
+      font-size: 1.1em;
+      padding: 20px 16px 12px;
+    }
+    @media (max-width: 800px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
       }
-      .plan-card {
-        width: 90%;
+      th, td {
+        text-align: left !important;
+      }
+      th {
+        background: #e3f2fd;
+      }
+      tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      .feature-name {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 6px;
       }
     }
   </style>
@@ -137,95 +124,127 @@
 <body>
 
   <h1>Compare Magic Mirror Plans</h1>
-  <p class="subtitle">Side-by-side comparison – Find the perfect tier for your creative visions</p>
+  <p class="subtitle">See exactly what you get with each tier – side by side</p>
 
-  <div class="pricing-container">
-
-    <div class="plan-card">
-      <div class="plan-header" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-        <h2 class="plan-name">Sparkle</h2>
-        <div class="plan-price">$7.99<small>/mo</small></div>
-      </div>
-      <ul class="features">
-        <li>5 AI Generations</li>
-        <li>Profile integration & Measurements</li>
-        <li>Save & Share Feature</li>
-        <li>Watermark-Free</li>
-        <li>Ad-Free Experience</li>
-        <li>Standard Resolution</li>
-        <li>Standard Queue</li>
-        <li>Limited Silhouette</li>
-        <li>Limited Mood</li>
-        <li>Start Sparkle – Twice the magic, smarter price</li>
-      </ul>
-    </div>
-
-    <div class="plan-card popular">
-      <div class="plan-header" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">
-        <h2 class="plan-name">Radiance</h2>
-        <div class="plan-price">$12.99<small>/mo</small></div>
-      </div>
-      <ul class="features">
-        <li>10 AI Generations</li>
-        <li>Profile integration & Measurements</li>
-        <li>Save & Share Feature</li>
-        <li>Watermark-Free</li>
-        <li>Ad-Free Experience</li>
-        <li>HD Resolution</li>
-        <li>Priority Queue</li>
-        <li>All Silhouettes Unlocked</li>
-        <li>Limited Mood</li>
-        <li>Join Radiance – Save $, smarter price</li>
-      </ul>
-    </div>
-
-    <div class="plan-card">
-      <div class="plan-header" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
-        <h2 class="plan-name">Majesty</h2>
-        <div class="plan-price">$19.99<small>/mo</small></div>
-      </div>
-      <ul class="features">
-        <li>20 AI Generations</li>
-        <li>Profile integration & Measurements</li>
-        <li>Save & Share Feature</li>
-        <li>Ad-Free</li>
-        <li>Ultra HD Resolution</li>
-        <li>Priority Queue</li>
-        <li>All Silhouettes Unlocked</li>
-        <li>All Moods Unlocked</li>
-        <li>Ultimate luxury, unbeatable value – Save 37%</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <p class="most-popular-note">Radiance is our most popular plan – the perfect balance of features & value!</p>
-
-  <h2>Available Silhouettes & Moods by Plan</h2>
-
-  <table class="silhouette-table">
+  <table>
     <thead>
       <tr>
-        <th>Plan</th>
-        <th>Silhouettes</th>
-        <th>Moods</th>
+        <th></th>
+        <th>
+          Sparkle<br>
+          <span class="plan-subtitle">Accessible elegant</span>
+        </th>
+        <th class="popular">
+          Radiance<br>
+          <span class="plan-subtitle">More privileges and shine (Most Popular)</span>
+        </th>
+        <th>
+          Majesty<br>
+          <span class="plan-subtitle">Exclusive couture experience</span>
+        </th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>Sparkle</strong></td>
-        <td>Limited Silhouette</td>
-        <td>Limited Mood: Avant-garde, Beach, Classic</td>
-      </tr>
-      <tr class="highlight">
-        <td><strong>Radiance</strong></td>
-        <td>All Silhouettes Unlocked<br>(A-Line, Waist, Mini, Princess, Empire, Mermaid, Column, Tea-Length, Trumpet...)</td>
-        <td>Limited Mood: Avant-garde, Beach, Bohemian, Classic, Ethereal, Glamorous, Modern, Modest</td>
+        <td class="feature-name">AI Generations</td>
+        <td>5</td>
+        <td><span class="upgrade">10</span></td>
+        <td><span class="upgrade">20</span></td>
       </tr>
       <tr>
-        <td><strong>Majesty</strong></td>
-        <td>All Silhouettes Unlocked</td>
-        <td>All Moods Unlocked: Avant-garde, Beach, Bohemian, Classic, Ethereal, Glamorous, Modern, Modest, Vintage, Quiet Luxury, Romantic, Royal...</td>
+        <td class="feature-name">Profile Integration</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>✔</td>
+      </tr>
+      <tr>
+        <td class="feature-name">Personalized Measurements</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>✔</td>
+      </tr>
+      <tr>
+        <td class="feature-name">Save & Share Feature</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>✔</td>
+      </tr>
+      <tr>
+        <td class="feature-name">Watermark-Free</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>✔</td>
+      </tr>
+      <tr>
+        <td class="feature-name">Ad-Free</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>✔</td>
+      </tr>
+      <tr>
+        <td class="feature-name">Resolution</td>
+        <td>Standard</td>
+        <td><span class="upgrade">HD</span></td>
+        <td><span class="upgrade">Ultra HD</span></td>
+      </tr>
+      <tr>
+        <td class="feature-name">Queue</td>
+        <td>Standard</td>
+        <td><span class="upgrade">Priority</span></td>
+        <td><span class="upgrade">Priority</span></td>
+      </tr>
+      <tr>
+        <td class="feature-name">Silhouette</td>
+        <td><span class="limited">Limited</span></td>
+        <td><span class="all-unlocked">Unlocked</span></td>
+        <td><span class="all-unlocked">Unlocked</span></td>
+      </tr>
+      <tr>
+        <td class="feature-name">Mood</td>
+        <td><span class="limited">Limited</span></td>
+        <td><span class="limited">Limited</span></td>
+        <td><span class="upgrade">Unlocked</span></td>
+      </tr>
+      <tr>
+        <td class="feature-name">Tagline</td>
+        <td>Start Sparkle</td>
+        <td>Join Radiance</td>
+        <td><span class="upgrade">Unlocked Majesty</span></td>
+      </tr>
+
+      <!-- Alt bölüm: Silhouette & Mood detayları -->
+      <tr><td colspan="4" class="section-title">Available Silhouette & Mood</td></tr>
+
+      <tr>
+        <td class="feature-name">Silhouette</td>
+        <td>
+          <span class="limited">Limited</span><br>
+          A-Line, Empire Waist, Mini,<br>Tea-Length, Trumpet
+        </td>
+        <td>
+          <span class="all-unlocked">All Unlocked</span><br>
+          A-Line, Column, Empire Waist,<br>Mermaid, Mini, Princess,<br>Tea-Length, Trumpet
+        </td>
+        <td>
+          <span class="all-unlocked">All Unlocked</span><br>
+          A-Line, Column, Empire Waist,<br>Mermaid, Mini, Princess,<br>Tea-Length, Trumpet
+        </td>
+      </tr>
+
+      <tr>
+        <td class="feature-name">Mood</td>
+        <td>
+          <span class="limited">Limited</span><br>
+          Avant-garde, Beach, Classic,<br>Ethereal, Modern, Modest, Vintage
+        </td>
+        <td>
+          <span class="limited">Limited</span><br>
+          Avant-garde, Beach, Bohemian,<br>Classic, Ethereal, Glamorous,<br>Modern, Modest, Vintage
+        </td>
+        <td>
+          <span class="upgrade">All Unlocked</span><br>
+          Avant-garde, Beach, Bohemian,<br>Classic, Ethereal, Glamorous,<br>Modern, Modest, Vintage,<br>Quiet Luxury, Romantic, Royal
+        </td>
       </tr>
     </tbody>
   </table>
