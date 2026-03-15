@@ -53,39 +53,22 @@
       display: block;
       margin-top: 6px;
     }
-    .popular {
-      position: relative;
-    }
-    .popular::after {
-      content: "Most Popular";
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #ffca28;
-      color: #000;
-      font-size: 0.8em;
-      font-weight: bold;
-      padding: 4px 12px;
-      border-radius: 12px;
-      white-space: nowrap;
-    }
     .feature-name {
       font-weight: 600;
       color: #333;
       min-width: 240px;
     }
-    .upgrade {
+    .upgrade-radiance {
       font-weight: bold;
-      color: #d32f2f;          /* kırmızı - üst plana özgü / ekstra */
+      color: #1976d2;          /* mavi - Radiance'a özgü ekstra */
+    }
+    .upgrade-majesty {
+      font-weight: bold;
+      color: #2e7d32;          /* yeşil - Majesty'ye özgü ekstra */
     }
     .limited {
       color: #757575;
       font-style: italic;
-    }
-    .all-unlocked {
-      font-weight: bold;
-      color: #2e7d32;         /* yeşil ton - unlocked vurgusu */
     }
     tr:last-child td {
       border-bottom: none;
@@ -97,6 +80,12 @@
       text-align: center;
       font-size: 1.1em;
       padding: 20px 16px 12px;
+    }
+    .extra-note {
+      font-size: 0.92em;
+      color: #555;
+      font-style: italic;
+      margin-top: 4px;
     }
     @media (max-width: 800px) {
       table, thead, tbody, th, td, tr {
@@ -134,9 +123,9 @@
           Sparkle<br>
           <span class="plan-subtitle">Accessible elegant</span>
         </th>
-        <th class="popular">
+        <th>
           Radiance<br>
-          <span class="plan-subtitle">More privileges and shine (Most Popular)</span>
+          <span class="plan-subtitle">More privileges and shine</span>
         </th>
         <th>
           Majesty<br>
@@ -148,8 +137,8 @@
       <tr>
         <td class="feature-name">AI Generations</td>
         <td>5</td>
-        <td><span class="upgrade">10</span></td>
-        <td><span class="upgrade">20</span></td>
+        <td><span class="upgrade-radiance">10</span></td>
+        <td><span class="upgrade-majesty">20</span></td>
       </tr>
       <tr>
         <td class="feature-name">Profile Integration</td>
@@ -184,32 +173,26 @@
       <tr>
         <td class="feature-name">Resolution</td>
         <td>Standard</td>
-        <td><span class="upgrade">HD</span></td>
-        <td><span class="upgrade">Ultra HD</span></td>
+        <td><span class="upgrade-radiance">HD</span></td>
+        <td><span class="upgrade-majesty">Ultra HD</span></td>
       </tr>
       <tr>
         <td class="feature-name">Queue</td>
         <td>Standard</td>
-        <td><span class="upgrade">Priority</span></td>
-        <td><span class="upgrade">Priority</span></td>
+        <td><span class="upgrade-radiance">Priority</span></td>
+        <td><span class="upgrade-majesty">Priority</span></td>
       </tr>
       <tr>
         <td class="feature-name">Silhouette</td>
         <td><span class="limited">Limited</span></td>
-        <td><span class="all-unlocked">Unlocked</span></td>
-        <td><span class="all-unlocked">Unlocked</span></td>
+        <td><span class="upgrade-radiance">Unlocked</span></td>
+        <td><span class="upgrade-majesty">Unlocked</span></td>
       </tr>
       <tr>
         <td class="feature-name">Mood</td>
         <td><span class="limited">Limited</span></td>
         <td><span class="limited">Limited</span></td>
-        <td><span class="upgrade">Unlocked</span></td>
-      </tr>
-      <tr>
-        <td class="feature-name">Tagline</td>
-        <td>Start Sparkle</td>
-        <td>Join Radiance</td>
-        <td><span class="upgrade">Unlocked Majesty</span></td>
+        <td><span class="upgrade-majesty">Unlocked</span></td>
       </tr>
 
       <!-- Alt bölüm: Silhouette & Mood detayları -->
@@ -218,32 +201,30 @@
       <tr>
         <td class="feature-name">Silhouette</td>
         <td>
-          <span class="limited">Limited</span><br>
           A-Line, Empire Waist, Mini,<br>Tea-Length, Trumpet
         </td>
         <td>
-          <span class="all-unlocked">All Unlocked</span><br>
           A-Line, Column, Empire Waist,<br>Mermaid, Mini, Princess,<br>Tea-Length, Trumpet
+          <div class="extra-note">(Radiance için sadece) + Column, Mermaid, Princess</div>
         </td>
         <td>
-          <span class="all-unlocked">All Unlocked</span><br>
           A-Line, Column, Empire Waist,<br>Mermaid, Mini, Princess,<br>Tea-Length, Trumpet
+          <div class="extra-note">(Majesty için sadece) All Silhouette Unlocked</div>
         </td>
       </tr>
 
       <tr>
         <td class="feature-name">Mood</td>
         <td>
-          <span class="limited">Limited</span><br>
           Avant-garde, Beach, Classic,<br>Ethereal, Modern, Modest, Vintage
         </td>
         <td>
-          <span class="limited">Limited</span><br>
           Avant-garde, Beach, Bohemian,<br>Classic, Ethereal, Glamorous,<br>Modern, Modest, Vintage
+          <div class="extra-note">(Radiance için sadece) + Bohemian, Glamorous</div>
         </td>
         <td>
-          <span class="upgrade">All Unlocked</span><br>
           Avant-garde, Beach, Bohemian,<br>Classic, Ethereal, Glamorous,<br>Modern, Modest, Vintage,<br>Quiet Luxury, Romantic, Royal
+          <div class="extra-note">(Majesty için sadece) + Quiet Luxury, Romantic, Royal</div>
         </td>
       </tr>
     </tbody>
