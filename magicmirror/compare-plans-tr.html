@@ -9,7 +9,7 @@
       font-family: Arial, Helvetica, sans-serif;
       max-width: 1100px;
       margin: 40px auto;
-      padding: 20px;
+      padding: 20px 20px 60px;
       line-height: 1.55;
       color: #222;
       background: #fafafa;
@@ -48,7 +48,7 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.12);
     }
     thead {
       position: sticky;
@@ -69,16 +69,19 @@
       min-width: 240px;
     }
     .upgrade-radiance {
-      color: #1976d2; /* mavi - Radiance ekstra */
-      font-weight: normal;
+      color: #1976d2;          /* mavi */
+      font-weight: bold;
     }
     .upgrade-majesty {
-      color: #2e7d32; /* yeşil - Majesty ekstra */
-      font-weight: normal;
+      color: #2e7d32;          /* yeşil */
+      font-weight: bold;
     }
     .limited {
       color: #757575;
       font-style: italic;
+      font-weight: normal;
+    }
+    .silhouette-list, .mood-list {
       font-weight: normal;
     }
     tr:last-child td {
@@ -92,9 +95,6 @@
       font-size: 1.1em;
       padding: 20px 16px 12px;
     }
-    .silhouette-list, .mood-list {
-      font-weight: normal;
-    }
     @media (max-width: 800px) {
       table, thead, tbody, th, td, tr {
         display: block;
@@ -104,6 +104,7 @@
       }
       thead th {
         position: static;
+        box-shadow: none;
       }
       tr {
         margin-bottom: 20px;
@@ -209,14 +210,14 @@
       <tr>
         <td class="feature-name">Siluet</td>
         <td class="silhouette-list">
-          Sınırlı:<br>A Kesim, İmparator, Mini, Midi, Trompet
+          Sınırlı:<br>A Kesim, İmparator, Midi, Mini, Trompet
         </td>
         <td class="silhouette-list">
-          Sınırsız:<br>A Kesim, İmparator, Mini, Midi, Trompet, 
+          Sınırsız:<br>A Kesim, İmparator, Midi, Mini, Trompet, 
           <span class="upgrade-radiance">Deniz Kızı, Prenses, Sütun</span>
         </td>
         <td class="silhouette-list">
-          Sınırsız:<br>A Kesim, Deniz Kızı, İmparator, Mini, Midi, Prenses, Sütun, Trompet
+          Sınırsız:<br>A Kesim, Deniz Kızı, İmparator, Midi, Mini, Prenses, Sütun, Trompet
         </td>
       </tr>
 
@@ -226,12 +227,10 @@
           Sınırlı:<br>Avangard, Klasik, Masalsı, Modern, Nostaljik, Plaj, Tesettüt
         </td>
         <td class="mood-list">
-          Sınırlı:<br>Avangard, Klasik, Masalsı, Modern, Nostaljik, Plaj, Tesettüt, 
-          <span class="upgrade-radiance">Bohem, İhtişamlı</span>
+          Sınırlı:<br>Avangard, Bohem, İhtişamlı, Klasik, Masalsı, Modern, Nostaljik, Plaj, Tesettüt
         </td>
         <td class="mood-list">
-          Sınırsız:<br>Avangard, Klasik, Masalsı, Modern, Nostaljik, Plaj, Tesettüt, 
-          <span class="upgrade-majesty">Bohem, İhtişamlı, Sessiz Lüks, Romantik, Kraliyet</span>
+          Sınırsız:<br>Avangard, Bohem, İhtişamlı, Klasik, Kraliyet, Masalsı, Modern, Nostaljik, Plaj, Romantik, Sessiz Lüks, Tesettüt
         </td>
       </tr>
     </tbody>
