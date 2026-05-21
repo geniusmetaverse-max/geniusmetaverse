@@ -11,13 +11,17 @@
       background: url("WL_Background.png") no-repeat center center fixed;
       background-size: cover;
       color: #fff;
-      overflow-x: hidden;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
     }
 
     header {
       text-align: center;
       padding: 60px 20px 20px;
-      position: relative;
     }
 
     header img.logo {
@@ -31,64 +35,100 @@
       100% { transform: translateY(0); }
     }
 
-    .about-section {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 30px;
-      background: rgba(0,0,0,0.6);
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-      animation: fadeIn 1.5s ease;
-      text-align: center;
+    .lang-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
     }
 
-    .lang-button {
-      display: inline-block;
-      margin: 15px;
-      padding: 12px 24px;
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
       font-size: 1.2rem;
       font-weight: bold;
-      color: #fff;
-      background: linear-gradient(135deg, #007bff, #6610f2);
+      color: #000;
+      background: #ffd700;
       border: none;
-      border-radius: 8px;
+      border-radius: 40px;
       cursor: pointer;
+      transition: all 0.3s ease;
       text-decoration: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
     }
 
-    .lang-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 12px rgba(255,255,255,0.6);
+    .lang-btn img {
+      width: 24px;
+      height: 24px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .lang-btn:hover {
+      background: #ffeb3b;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
+    }
+
+    .store-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .store-btn {
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+      background: #333;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    .store-btn:hover {
+      background: #555;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
     }
 
     footer {
-      text-align: center;
-      padding: 40px 20px;
+      position: fixed;
+      bottom: 15px;
+      left: 0; right: 0;
       font-size: 0.9rem;
-      color: #ccc;
+      opacity: 0.8;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <!-- Logo image -->
     <img src="WL_Logo.png" alt="WordLegend Logo" class="logo">
   </header>
 
-  <section class="about-section">
-    <a href="https://geniusmetaverse-max.github.io/geniusmetaverse/wordlegend/aboutus-en.html" class="lang-button">English</a>
-    <a href="https://geniusmetaverse-max.github.io/geniusmetaverse/wordlegend/aboutus-tr.html" class="lang-button">Türkçe</a>
-  </section>
+  <div class="lang-buttons">
+    <a href="aboutus-en.html" class="lang-btn">
+      <img src="https://flagcdn.com/w20/gb.png" alt="English"> English
+    </a>
+    <a href="aboutus-tr.html" class="lang-btn">
+      <img src="https://flagcdn.com/w20/tr.png" alt="Türkçe"> Türkçe
+    </a>
+  </div>
+
+  <div class="store-buttons">
+    <a href="#" class="store-btn">App Store</a>
+    <a href="#" class="store-btn">Play Store</a>
+  </div>
 
   <footer>
-    WordLegend © 2026 - All Rights Reserved.
+    © 2026 Word Legend • All rights reserved • Powered by littleGenius Metaverse
   </footer>
 
 </body>
