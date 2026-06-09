@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,43 +63,28 @@
       gap: 30px;
       flex-wrap: wrap;
     }
-    .store-btn img {
-      height: 60px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .store-btn img:hover {
-      transform: translateY(-4px) scale(1.05);
-    }
-    /* Zarif snackbar kutusu */
-    .snackbar {
-      visibility: hidden;
-      min-width: 200px;
-      background: rgba(0,0,0,0.8);
+    .store-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      font-weight: bold;
       color: #ffd700;
+      background: transparent;
       border: 2px solid #ffd700;
-      text-align: center;
-      border-radius: 12px;
-      padding: 14px;
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 999;
-      font-size: 1rem;
-      box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
     }
-    .snackbar.show {
-      visibility: visible;
-      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    .store-btn img {
+      width: 28px;
+      height: 28px;
     }
-    @keyframes fadein {
-      from {bottom: 0; opacity: 0;}
-      to {bottom: 30px; opacity: 1;}
-    }
-    @keyframes fadeout {
-      from {bottom: 30px; opacity: 1;}
-      to {bottom: 0; opacity: 0;}
+    .store-btn:hover {
+      background: rgba(255, 215, 0, 0.1);
+      transform: translateY(-4px);
     }
     .footer {
       position: absolute;
@@ -115,36 +100,24 @@
 <body>
   <div class="container">
     <h1>MAGIC MIRROR</h1>
-    <h2>Gelinlik Atölyesi</h2>
-   
+    <h2>The Bridal Atelier</h2>
+  
     <p class="welcome">
-      Hayallerinizdeki gelinliği keşfetme yolculuğunuzda size ilham vermek için buradayız.<br>
-      Nefes kesen gelinlik stillerini deneyimleyerek büyüleyici güzelliğinizi ortaya çıkarın.<br>
-      Her anın tadını çıkarın… bu sihir sizin!
+      Welcome to your private haute couture boutique.<br>
+      We're here to inspire you to discover the wedding dress of your dreams.<br>
+      Enjoy every moment... this magic belongs to you!
     </p>
     <div class="links">
-      <a href="#" class="store-btn" onclick="showSnackbar()">
-        <img src="AppStore.png" alt="App Store">
+      <a href="#" class="store-btn" onclick="alert('Coming Soon!')">
+        <img src="App Store.png" alt="App Store"> App Store
       </a>
       <a href="https://play.google.com/store/apps/details?id=com.geniusmetaversemagicmirror" class="store-btn">
-        <img src="PlayStore.png" alt="Play Store">
+        <img src="Play Store.png" alt="Play Store"> Play Store
       </a>
     </div>
   </div>
-
-  <!-- Snackbar kutusu -->
-  <div id="snackbar" class="snackbar">Çok yakında!</div>
-
   <div class="footer">
-    © 2026 Magic Mirror - Bridal AI - Tüm hakları saklıdır - Powered by GeniusMetaverse
+    © 2026 Magic Mirror - Bridal AI - All rights reserved - Powered by GeniusMetaverse
   </div>
-
-  <script>
-    function showSnackbar() {
-      var x = document.getElementById("snackbar");
-      x.className = "snackbar show";
-      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-    }
-  </script>
 </body>
 </html>
