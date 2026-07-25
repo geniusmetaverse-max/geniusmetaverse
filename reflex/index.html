@@ -77,24 +77,35 @@
       margin-top: 20px;
     }
 
-    .store-btn {
-      padding: 12px 24px;
+      .store-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
       font-size: 1.1rem;
       font-weight: bold;
       color: #fff;
-      background: #333;
-      border: none;
-      border-radius: 40px;
-      cursor: pointer;
-      transition: all 0.3s ease;
       text-decoration: none;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      width: 180px;
+    }
+
+    .store-btn img {
+      width: 28px;
+      height: 28px;
     }
 
     .store-btn:hover {
-      background: #555;
       transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+      background: rgba(255, 255, 255, 0.25);
     }
 
     footer {
