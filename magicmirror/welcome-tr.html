@@ -55,52 +55,6 @@
       font-style: italic;
       color: #f5f5f5;
     }
-    .links {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-    .store-btn img {
-      height: 42px; /* %30 küçültülmüş */
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .store-btn img:hover {
-      transform: translateY(-4px) scale(1.05);
-    }
-    /* Zarif snackbar kutusu */
-    .snackbar {
-      visibility: hidden;
-      min-width: 200px;
-      background: rgba(0,0,0,0.8);
-      color: #ffd700;
-      border: 2px solid #ffd700;
-      text-align: center;
-      border-radius: 12px;
-      padding: 14px;
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 999;
-      font-size: 1rem;
-      box-shadow: 0 6px 20px rgba(255,215,0,0.4);
-    }
-    .snackbar.show {
-      visibility: visible;
-      animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    }
-    @keyframes fadein {
-      from {bottom: 0; opacity: 0;}
-      to {bottom: 30px; opacity: 1;}
-    }
-    @keyframes fadeout {
-      from {bottom: 30px; opacity: 1;}
-      to {bottom: 0; opacity: 0;}
-    }
     .footer {
       position: absolute;
       bottom: 20px;
@@ -122,29 +76,10 @@
       Nefes kesen gelinlik stillerini deneyimleyerek büyüleyici güzelliğinizi ortaya çıkarın.<br>
       Her anın tadını çıkarın… bu sihir sizin!
     </p>
-    <div class="links">
-      <a href="#" class="store-btn" onclick="showSnackbar()">
-        <img src="App%20Store.png" alt="App Store">
-      </a>
-      <a href="https://play.google.com/store/apps/details?id=com.geniusmetaversemagicmirror" class="store-btn">
-        <img src="Play%20Store.png" alt="Play Store">
-      </a>
-    </div>
   </div>
-
-  <!-- Snackbar kutusu -->
-  <div id="snackbar" class="snackbar">Çok Yakında!</div>
 
   <div class="footer">
-    © 2026 Magic Mirror - Bridal AI - Tüm hakları saklıdır - Powered by GeniusMetaverse
+    © 2026 Magic Mirror - Bridal AI - Tüm hakları saklıdır - Powered by littleGenius
   </div>
-
-  <script>
-    function showSnackbar() {
-      var x = document.getElementById("snackbar");
-      x.className = "snackbar show";
-      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-    }
-  </script>
 </body>
 </html>
