@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RefleX - Nasıl Oynanır?</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --container-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #3b82f6;
+            --secondary: #10b981;
+            --card-bg: #334155;
+            --border-radius: 12px;
+        }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            font-size: 1.1em;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 24px;
+            border-left: 5px solid var(--primary);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        .game-title {
+            font-size: 1.3em;
+            color: #60a5fa;
+            font-weight: bold;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .description {
+            color: #cbd5e1;
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .pro-badge {
+            background: #8b5cf6;
+            color: white;
+            font-size: 0.6em;
+            padding: 4px 8px;
+            border-radius: 20px;
+            vertical-align: middle;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nasıl Oynanır?</h1>
+        <p class="subtitle">RefleX Oyun Modları Kılavuzu</p>
+
+        <div class="game-grid">
+            <div class="game-card">
+                <div class="game-title">Color Switch Tap</div>
+                <p class="description">Hedef renk ile ekrandaki renk eşleştiği anda doğru butona dokunun. Zamanlamanızı iyi ayarlayın!</p>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-title">Falling Block Dodge</div>
+                <p class="description">Ekranın üstünden düşen engellere çarpmamak için objenizi sağa sola kaydırın. Reflekslerinize güvenin!</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Light</div>
+                <p class="description">Ekranda beliren ışık sinyallerine mümkün olan en kısa sürede tepki verin. Gözünüzü kırpmayın!</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Tap at the Beat</div>
+                <p class="description">Arka planda çalan ritimle tam senkronize bir şekilde ekrana dokunun. Ritmi kaçırmayın!</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Quick Reaction Quiz</div>
+                <p class="description">Ekranda beliren ifadenin doğru mu yanlış mı olduğuna saniyeler içinde karar verin. Hızlı düşünün!</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Rapid Tap</div>
+                <p class="description">Verilen süre içerisinde ekrana yapabildiğiniz kadar çok dokunun. Parmaklarınızı hızlandırın!</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Survival Rush</div>
+                <p class="description">Giderek hızlanan ve zorlaşan engellerin arasında olabildiğince uzun süre hayatta kalın.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Blink Challenge</div>
+                <p class="description">Yanıp sönen hedefleri takip edin ve doğru zamanda tepki vererek hızınızı test edin.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Chain Reaction</div>
+                <p class="description">Ekranda oluşan zincirleme reaksiyonları doğru zamanlamayla tamamlayarak komboyu sürdürün.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Dual Tap Reflex</div>
+                <p class="description">Ekranın iki farklı noktasında aynı anda beliren hedeflere iki elinizi kullanarak hızla dokunun.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Mirror Tap</div>
+                <p class="description">Ekranda beliren hareketin tam simetriğini (ayna yansımasını) uygulayarak zihninizi şaşırtın.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Mental Math</div>
+                <p class="description">Karşınıza çıkan dört işlem matematik sorularını saniyeler içinde zihninizden çözün.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Nitro Rush <span class="pro-badge">PRO</span></div>
+                <p class="description">Hız limitlerini zorlayın! Çılgın bir hızda gelen engellerin arasından sıyrılarak ilerleyin.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Split Focus <span class="pro-badge">PRO</span></div>
+                <p class="description">İki farklı görevi (oyunu) aynı anda yöneterek zihninizin çoklu görev (multitasking) sınırlarını zorlayın.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
