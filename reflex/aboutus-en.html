@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RefleX - Index</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: url("reflex_onboarding.png") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
 
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    header img.logo {
+      width: 200px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Info Box Design */
+    .info-box {
+      background: rgba(15, 15, 20, 0.85);
+      border-radius: 12px;
+      padding: 30px 40px;
+      margin: 10px auto 30px;
+      max-width: 800px;
+      width: 85%;
+      text-align: center;
+      line-height: 1.7;
+      font-size: 1.15rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    footer {
+      position: fixed;
+      bottom: 15px;
+      left: 0; right: 0;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .info-box {
+        padding: 20px;
+        font-size: 1rem;
+      }
+      footer {
+        position: relative;
+        margin-top: 40px;
+        bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="refleX_avatar.png" alt="RefleX Logo" class="logo">
+  </header>
+
+  <!-- WordLegend style description box -->
+  <div class="info-box">
+    RefleX is a modern, addictive skill game that tests your reflexes and mental speed. With its various game modes, dynamic visuals, and challenging levels, it appeals to players of all ages and ensures you have a great time.
+  </div>
+
+  <footer>
+    © 2026 RefleX • All rights reserved • Powered by littleGenius
+  </footer>
+
+</body>
+</html>
