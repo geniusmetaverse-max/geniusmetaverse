@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RefleX - How to Play</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --container-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #3b82f6;
+            --secondary: #10b981;
+            --card-bg: #334155;
+            --border-radius: 12px;
+        }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            font-size: 1.1em;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 24px;
+            border-left: 5px solid var(--primary);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        .game-title {
+            font-size: 1.3em;
+            color: #60a5fa;
+            font-weight: bold;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .description {
+            color: #cbd5e1;
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .pro-badge {
+            background: #8b5cf6;
+            color: white;
+            font-size: 0.6em;
+            padding: 4px 8px;
+            border-radius: 20px;
+            vertical-align: middle;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>How to Play</h1>
+        <p class="subtitle">Complete Guide for RefleX Game Modes</p>
+
+        <div class="game-grid">
+            <div class="game-card">
+                <div class="game-title">Color Switch Tap</div>
+                <p class="description">Tap the correct button the exact moment the on-screen color matches the target color. Perfect your timing!</p>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-title">Falling Block Dodge</div>
+                <p class="description">Swipe left or right to avoid the obstacles falling from the top. Trust your reflexes!</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Light</div>
+                <p class="description">React as quickly as possible to the light signals appearing on the screen. Don't blink!</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Tap at the Beat</div>
+                <p class="description">Tap the screen in perfect synchronization with the background rhythm. Don't miss a beat!</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Quick Reaction Quiz</div>
+                <p class="description">Decide whether the statement on the screen is true or false in just seconds. Think fast!</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Rapid Tap</div>
+                <p class="description">Tap the screen as many times as you can within the given time limit. Speed up those fingers!</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Survival Rush</div>
+                <p class="description">Survive as long as you can through increasingly faster and more difficult obstacles.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Blink Challenge</div>
+                <p class="description">Follow the blinking targets and test your speed by reacting at the exact right time.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Chain Reaction</div>
+                <p class="description">Maintain the combo by completing on-screen chain reactions with precise timing.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Dual Tap Reflex</div>
+                <p class="description">Use both hands to quickly tap targets appearing simultaneously on different sides of the screen.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Mirror Tap</div>
+                <p class="description">Challenge your brain by applying the exact symmetrical (mirrored) movement of what appears on screen.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Mental Math</div>
+                <p class="description">Solve fast-paced arithmetic math problems in your head within seconds.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Nitro Rush <span class="pro-badge">PRO</span></div>
+                <p class="description">Push the speed limits! Dodge and weave through obstacles approaching at a crazy pace.</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-title">Split Focus <span class="pro-badge">PRO</span></div>
+                <p class="description">Push your multitasking boundaries by managing two different tasks at the exact same time.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
