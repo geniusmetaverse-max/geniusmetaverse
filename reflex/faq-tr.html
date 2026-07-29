@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RefleX - Sık Sorulan Sorular</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        .header-line {
+            width: 100%;
+            height: 3px;
+            background-color: #8b5cf6; /* RefleX Mor Tonu */
+            margin: 0 auto 40px auto;
+        }
+        .faq-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .faq-item {
+            border-bottom: 1px solid #eee;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: #f8f9fa;
+        }
+        .faq-answer {
+            padding: 0 25px 25px 25px;
+            display: none;
+            line-height: 1.8;
+            color: #555;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .plus {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #8b5cf6;
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .plus {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
 
+    <h1>Sık Sorulan Sorular (SSS)</h1>
+    <div class="header-line"></div>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+            <div class="faq-question">
+                RefleX nedir?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                RefleX, reflekslerinizi, el-göz koordinasyonunuzu ve zihinsel odaklanmanızı geliştirmek için tasarlanmış modern bir beceri oyunudur. Görsel, İşitsel ve Zihinsel kategorilerde toplam 14 farklı oyun modu ile sınırlarınızı test etmenizi sağlar.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Oyun modlarının kilitleri nasıl açılır?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Oyuna ilk başladığınızda Seviye 1'deki "Temel" (Core) oyun modları açıktır. Oyun oynadıkça Tecrübe Puanı (XP) kazanır ve seviye atlarsınız. Belirli seviyelere (örneğin Seviye 16, 31, 46 vb.) ulaştığınızda, kazandığınız oyun içi puanları kullanarak yeni ve daha zorlu "Ekstra" oyun modlarının kilitlerini açabilirsiniz.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Hangi dil seçenekleriyle oynayabilirim?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                RefleX oyununu "Ayarlar > Dil" bölümünden yapacağınız tercihle hem Türkçe hem de İngilizce olarak oynayabilirsiniz. Dil tercihinizi istediğiniz zaman oyun içerisinden değiştirebilirsiniz.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Mağazadaki güçlendirmeler (Destek Güçleri) ne işe yarar?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Oyun oynayarak kazandığınız Puanlar ile Mağaza (Store) üzerinden çeşitli güçlendirmeler satın alabilirsiniz. Bu güçlendirmeler (zamanı yavaşlatma, hata toleransı, çifte puan vb.) zorlu oyun modlarında size avantaj sağlar ve daha yüksek skorlar elde ederek liderlik tablolarında yükselmenize yardımcı olur. Puanlarınız bittiğinde yine mağaza üzerinden ek puan paketleri edinebilirsiniz.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                RefleX PRO abonesi olmak ne sağlar?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                RefleX PRO paketi ile oyundaki deneyiminizi en üst seviyeye taşıyan şu ayrıcalıklara sahip olursunuz:<br><br>
+                - <strong>Özel Oyun Modları:</strong> Sadece PRO üyelere açık olan "Nitro Rush" ve "Split Focus" gibi en zorlu oyun modlarına erişim.<br>
+                - <strong>2 Kat Ödül:</strong> Oynadığınız her oyundan 2 kat (2x) daha fazla Puan ve XP kazanırsınız.<br>
+                - <strong>Reklamsız Deneyim:</strong> Tüm reklamlar tamamen kaldırılır, kesintisiz oyun keyfi yaşarsınız.<br>
+                - <strong>PRO Rozeti:</strong> Liderlik tablolarında isminizin hemen yanında size özel şık bir "PRO" rozeti sergilenir.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Satın aldıktan sonra aboneliğimi iptal edebilir miyim?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                - Tek seferlik puan paketleri hesaba anında yüklendiği için iade veya iptal edilemez.<br>
+                - RefleX PRO Aylık Abonelik paketinizi ise dilediğiniz zaman App Store veya Google Play Store hesap ayarlarınız üzerinden iptal edebilir ve otomatik yenilemeyi durdurabilirsiniz. İptal etmeniz durumunda, sahip olduğunuz tüm PRO haklarını abonelik bitiş tarihinize kadar kullanmaya devam edersiniz.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const allItems = document.querySelectorAll('.faq-item');
+                
+                allItems.forEach(i => {
+                    if (i !== item) {
+                        i.classList.remove('active');
+                    }
+                });
+                
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
