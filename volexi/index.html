@@ -5,7 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#04152f">
-<meta name="description" content="Meet Volexi, the fast-paced word puzzle game.">
+<meta name="description" content="Meet Volexi, the fast-paced word puzzle game that challenges your vocabulary, quick thinking, and strategy.">
+
 <title>Volexi — Word Puzzle Challenge</title>
 
 <style>
@@ -21,9 +22,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Segoe UI", system-ui, sans-serif;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
     color: #f7f9ff;
     text-align: center;
+
     background:
         radial-gradient(
             ellipse at 50% 35%,
@@ -47,6 +49,8 @@ body {
     animation: enter 850ms ease-out both;
 }
 
+/* LOGO */
+
 .brand {
     position: relative;
     display: inline-grid;
@@ -62,12 +66,14 @@ body {
     width: 150%;
     height: 150%;
     border-radius: 50%;
+
     background: radial-gradient(
         circle,
         rgba(89, 157, 255, .28) 0%,
         rgba(49, 105, 205, .12) 38%,
         transparent 72%
     );
+
     filter: blur(12px);
     animation: glow 4.5s ease-in-out infinite;
 }
@@ -78,18 +84,23 @@ body {
     max-width: 58vw;
     height: auto;
     object-fit: contain;
+
     filter: drop-shadow(
         0 12px 24px rgba(0, 0, 0, .28)
     );
+
     animation: float 4.5s ease-in-out infinite;
 }
+
+/* HEADINGS AND TEXT */
 
 h1 {
     margin: 0 0 18px;
     font-size: clamp(2rem, 5vw, 2.8rem);
     line-height: 1.15;
     letter-spacing: -.035em;
-    color: #fff;
+    color: #ffffff;
+
     text-shadow: 0 4px 22px rgba(0, 0, 0, .28);
 }
 
@@ -105,6 +116,8 @@ h1 {
     margin-top: 14px;
 }
 
+/* APP STORE BUTTON */
+
 .store-buttons {
     margin-top: 34px;
 }
@@ -112,28 +125,36 @@ h1 {
 .store-btn {
     min-width: 230px;
     min-height: 64px;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
+
     padding: 14px 28px;
+
     border: 1px solid rgba(255, 255, 255, .38);
     border-radius: 19px;
+
     background: linear-gradient(
         135deg,
         rgba(255, 255, 255, .17),
         rgba(255, 255, 255, .08)
     );
+
     box-shadow:
         0 12px 30px rgba(0, 0, 0, .24),
         inset 0 1px rgba(255, 255, 255, .15);
-    color: #fff;
-    font: inherit;
+
+    color: #ffffff;
+    font-family: inherit;
     font-size: 1.15rem;
     font-weight: 750;
     text-decoration: none;
+
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+
     transition:
         transform 220ms ease,
         background 220ms ease,
@@ -142,8 +163,16 @@ h1 {
 
 .store-btn:hover {
     transform: translateY(-4px);
-    background: rgba(255, 255, 255, .22);
-    box-shadow: 0 17px 34px rgba(0, 0, 0, .32);
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, .24),
+        rgba(255, 255, 255, .12)
+    );
+
+    box-shadow:
+        0 17px 34px rgba(0, 0, 0, .32),
+        0 0 26px rgba(91, 151, 255, .12);
 }
 
 .store-btn:focus-visible {
@@ -151,23 +180,34 @@ h1 {
     outline-offset: 5px;
 }
 
+/* APPLE LOGO - SVG */
+
 .apple-icon {
-    font-size: 1.65rem;
-    line-height: 1;
+    display: block;
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    fill: currentColor;
 }
+
+/* FOOTER */
 
 footer {
     width: 100%;
     padding: 22px 10px 26px;
+
     color: #c4d0e7;
     font-size: .92rem;
     line-height: 1.6;
 }
 
+/* ANIMATIONS */
+
 @keyframes float {
     0%, 100% {
         transform: translateY(0) rotate(0deg);
     }
+
     50% {
         transform: translateY(-10px) rotate(-1deg);
     }
@@ -178,6 +218,7 @@ footer {
         opacity: .62;
         transform: scale(.94);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.08);
@@ -189,11 +230,14 @@ footer {
         opacity: 0;
         transform: translateY(14px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
+/* MOBILE */
 
 @media (max-width: 520px) {
     body {
@@ -202,6 +246,10 @@ footer {
 
     .hero {
         padding: 24px 0 30px;
+    }
+
+    .brand {
+        margin-bottom: 24px;
     }
 
     .logo {
@@ -221,8 +269,12 @@ footer {
     }
 }
 
+/* ACCESSIBILITY */
+
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: .01ms !important;
@@ -235,16 +287,21 @@ footer {
 
 <main class="hero">
 
+    <!-- ANIMATED VOLEXI LOGO -->
     <div class="brand">
         <img
             class="logo"
             src="./Volexi_Launcher.png"
             alt="Volexi logo"
+            width="512"
+            height="512"
         >
     </div>
 
+    <!-- MAIN HEADING -->
     <h1>Welcome to Volexi!</h1>
 
+    <!-- INTRODUCTION -->
     <p class="intro">
         The fast-paced, tactile word puzzle game designed
         to test your vocabulary, quick thinking,
@@ -256,19 +313,36 @@ footer {
         and climb the global leaderboard!
     </p>
 
+    <!-- APP STORE BUTTON -->
     <div class="store-buttons">
+
         <a
             class="store-btn"
             href="APP_STORE_LINK_HERE"
             aria-label="Download Volexi on the App Store"
         >
-            <span class="apple-icon" aria-hidden="true"></span>
+
+            <!-- Apple logo as inline SVG -->
+            <svg
+                class="apple-icon"
+                viewBox="0 0 24 24"
+                width="25"
+                height="25"
+                fill="currentColor"
+                aria-hidden="true"
+            >
+                <path d="M16.37 12.25c.03 3.12 2.74 4.16 2.77 4.17-.02.07-.43 1.48-1.42 2.94-.85 1.27-1.73 2.53-3.12 2.56-1.36.03-1.8-.83-3.36-.83-1.56 0-2.05.8-3.33.86-1.34.05-2.36-1.37-3.22-2.63-1.75-2.53-3.09-7.14-1.29-10.25.89-1.55 2.49-2.53 4.23-2.56 1.32-.03 2.56.9 3.36.9.8 0 2.3-1.11 3.88-.95.66.03 2.52.27 3.71 2.02-.1.06-2.22 1.3-2.21 3.77ZM13.82 4.65c.71-.86 1.19-2.05 1.06-3.24-1.03.04-2.28.69-3.02 1.55-.66.76-1.24 1.97-1.09 3.13 1.15.09 2.33-.58 3.05-1.44Z"/>
+            </svg>
+
             <span>App Store</span>
+
         </a>
+
     </div>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
     Volexi © 2026 · All Rights Reserved · Powered by littleGenius
 </footer>
