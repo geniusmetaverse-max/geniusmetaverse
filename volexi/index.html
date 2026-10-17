@@ -6,153 +6,136 @@
 <title>Volexi</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', system-ui, sans-serif;
+
+body{
+    margin:0;
+    font-family:'Segoe UI',system-ui,sans-serif;
 
     background:
     radial-gradient(circle at center,
     #123f8c 0%,
-    #0b2f6e 25%,
-    #041a43 55%,
-    #020d22 100%);
+    #0b2f6e 30%,
+    #041a43 65%,
+    #020b1d 100%);
 
-    color: #ffffff;
-    text-align: center;
+    color:white;
+    text-align:center;
 
-    min-height: 100vh;
+    min-height:100vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    overflow-x: hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
-header {
-    text-align: center;
-    padding: 60px 20px 20px;
+header{
+    padding:50px 20px 10px 20px;
 }
 
-.logo {
-    width: 220px;
-    max-width: 70%;
-    animation: float 4s ease-in-out infinite;
-    filter: drop-shadow(0 12px 25px rgba(212,175,55,0.25));
+.logo{
+    width:220px;
+    max-width:75%;
+
+    animation:float 4s ease-in-out infinite;
+
+    filter:drop-shadow(0 10px 25px rgba(212,175,55,.30));
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-15px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
 }
 
-.intro-text {
-    max-width: 760px;
-
-    margin: 20px auto;
-    padding: 0 25px;
-
-    line-height: 1.8;
-
-    text-shadow: 0 3px 12px rgba(0,0,0,0.45);
+.content{
+    max-width:800px;
+    padding:10px 25px 0 25px;
 }
 
-.intro-text h1 {
-    color: #f2cf6c;
-    font-size: 2.4rem;
-    margin-bottom: 25px;
+.content h1{
+    color:#f5d97a;
+    font-size:2.6rem;
+    margin-bottom:25px;
+
+    text-shadow:0 3px 15px rgba(0,0,0,.35);
 }
 
-.intro-text p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+.content p{
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:15px;
+
+    text-shadow:0 2px 10px rgba(0,0,0,.40);
 }
 
-.store-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 35px;
+.store-buttons{
+    margin-top:35px;
 }
 
-.store-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+.store-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
 
-    width: 220px;
+    padding:16px 40px;
 
-    padding: 15px 30px;
+    min-width:220px;
 
-    font-size: 1.1rem;
-    font-weight: 700;
+    color:white;
+    text-decoration:none;
 
-    color: white;
-    text-decoration: none;
+    font-size:1.15rem;
+    font-weight:700;
 
-    border-radius: 20px;
+    border-radius:18px;
 
-    background: rgba(255,255,255,0.12);
+    background:rgba(255,255,255,0.12);
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    border:1px solid rgba(255,255,255,0.30);
 
-    border: 1px solid rgba(255,255,255,0.25);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,0.35),
-    0 0 20px rgba(212,175,55,0.15);
+    0 8px 24px rgba(0,0,0,0.25),
+    inset 0 1px 1px rgba(255,255,255,0.15);
 
-    transition: all .3s ease;
+    transition:all .3s ease;
 }
 
-.store-btn:hover {
-    transform: translateY(-5px);
+.store-btn:hover{
+    transform:translateY(-4px);
 
-    background: rgba(255,255,255,0.18);
+    background:rgba(255,255,255,0.18);
 
     box-shadow:
-    0 15px 35px rgba(0,0,0,0.45),
-    0 0 30px rgba(212,175,55,0.25);
+    0 12px 30px rgba(0,0,0,0.35),
+    inset 0 1px 1px rgba(255,255,255,0.20);
 }
 
-.store-btn img {
-    width: 28px;
-    height: 28px;
-    filter: brightness(0) invert(1);
+.apple-icon{
+    font-size:28px;
+    line-height:1;
 }
 
-footer {
-    margin-top: auto;
-    padding: 30px 20px;
+footer{
+    margin-top:auto;
+    padding:30px 20px;
 
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.75);
+    font-size:.9rem;
+    color:rgba(255,255,255,.75);
 }
 
-.highlight {
-    color: #f2cf6c;
-}
 </style>
 </head>
 
 <body>
 
 <header>
-    <imgxi_Launcher.png
-</header>
+    <img src="Volexi_Launcherder>
 
-<div class="intro-text">
+<div class="content">
 
     <h1>Welcome to Volexi!</h1>
 
@@ -170,10 +153,15 @@ footer {
 </div>
 
 <div class="store-buttons">
+
     YOUR_APP_STORE_LINK_HERE
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="App Store">
-        App Store
+
+        <span class="apple-icon">&#63743;</span>
+
+        <span>App Store</span>
+
     </a>
+
 </div>
 
 <footer>
