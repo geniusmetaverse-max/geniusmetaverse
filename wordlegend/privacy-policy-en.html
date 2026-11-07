@@ -1,134 +1,845 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordLegend - Privacy Policy</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.7;
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            color: #333;
-        }
-        h1, h2 {
-            color: #1a1a1a;
-        }
-        h1 {
-            text-align: center;
-            border-bottom: 2px solid #4f46e5;
-            padding-bottom: 15px;
-        }
-        .last-updated {
-            text-align: center;
-            color: #666;
-            font-size: 0.95rem;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101a31">
+  <title id="pageTitle">WordLegend - Gizlilik Politikası · littleGENIUS</title>
+  <meta name="description" id="pageMetaDesc" content="WordLegend Gizlilik Politikası: Kişisel verilerinizin nasıl toplandığı, kullanıldığı, korunduğu ve KVKK/GDPR haklarınız hakkında detaylı bilgilendirme.">
+  <link rel="icon" type="image/png" href="../favicon_littleGenius.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_littleGenius.png">
+  <style>
+    :root {
+      --navy: #101a31;
+      --navy-2: #172541;
+      --navy-deep: #0a1324;
+      --ink: #182238;
+      --ink-soft: #2c3850;
+      --muted: #5e6c84;
+      --gold: #e7c45b;
+      --gold-hover: #f1d36f;
+      --cream: #f5f3ee;
+      --white: #ffffff;
+      --border-subtle: #e6e4dc;
+      --header-h: 68px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 20px); }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.75;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ==========================================================================
+       SITE HEADER (littleGENIUS Standart Üst Bar)
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      z-index: 50;
+      inset: 0 0 auto;
+      min-height: var(--header-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 clamp(16px, 4vw, 56px);
+      color: #fff;
+      background: rgba(13, 24, 47, .96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, .09);
+      box-shadow: 0 4px 24px rgba(0,0,0,.25);
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* En solda Sarı Geri Butonu: Daima Ana Çatı Marka (littleGENIUS) */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy-deep);
+      font-size: .8rem;
+      font-weight: 750;
+      letter-spacing: -.01em;
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+      box-shadow: 0 2px 10px rgba(231,196,91,.28);
+    }
+    .back-btn:hover {
+      background: var(--gold-hover);
+      transform: translateX(-2px);
+      box-shadow: 0 4px 14px rgba(231,196,91,.4);
+    }
+    .back-btn svg { width: 14px; height: 14px; fill: currentColor; }
+
+    .brand-divider {
+      width: 1px;
+      height: 22px;
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    /* Yanındaki Beyaz Başlık Linki: Daima İlgili Ürüne (WordLegend) Yönlendirir */
+    .app-brand-link {
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      white-space: nowrap;
+      transition: color .2s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .app-brand-link:hover {
+      color: var(--gold);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .language-switch {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      border-left: 1px solid rgba(255,255,255,.14);
+      padding-left: 14px;
+    }
+    .language-switch button {
+      background: transparent;
+      border: 1px solid transparent;
+      color: rgba(255,255,255,.75);
+      font-size: .76rem;
+      font-weight: 750;
+      letter-spacing: .08em;
+      padding: 4px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: color .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .language-switch button:hover {
+      color: #fff;
+      border-color: rgba(255,255,255,.25);
+    }
+    .language-switch button[aria-pressed="true"] {
+      color: var(--navy-deep);
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+
+    /* ==========================================================================
+       DOKÜMAN GÖVDE & TİPOGRAFİ
+       ========================================================================== */
+    .doc-page {
+      padding: calc(var(--header-h) + 36px) clamp(16px, 4vw, 32px) 80px;
+    }
+
+    .doc-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 24px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 12px 40px rgba(16, 26, 49, 0.05);
+      padding: clamp(28px, 5vw, 64px);
+    }
+
+    .doc-header {
+      text-align: center;
+      margin-bottom: 36px;
+      border-bottom: 2px solid #eef0f4;
+      padding-bottom: 28px;
+    }
+
+    .doc-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(231, 196, 91, 0.15);
+      color: #946f17;
+      border: 1px solid rgba(231, 196, 91, 0.35);
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .doc-header h1 {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-size: clamp(1.9rem, 3.8vw, 2.7rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      line-height: 1.2;
+    }
+
+    .doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: clamp(12px, 2.5vw, 24px);
+      font-size: .86rem;
+      color: var(--muted);
+    }
+    .doc-meta-item strong { color: var(--ink); }
+
+    /* Hızlı İndeks (İçindekiler) */
+    .doc-toc {
+      background: #faf9f6;
+      border: 1px solid #ebe8de;
+      border-radius: 18px;
+      padding: 22px 26px;
+      margin-bottom: 40px;
+    }
+    .doc-toc h3 {
+      margin: 0 0 12px;
+      font-size: .95rem;
+      font-weight: 750;
+      color: var(--navy);
+      letter-spacing: -.01em;
+    }
+    .doc-toc ol {
+      margin: 0;
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 24px;
+      font-size: .85rem;
+    }
+    .doc-toc a {
+      color: #3b5998;
+      transition: color .2s ease;
+    }
+    .doc-toc a:hover {
+      color: var(--navy);
+      text-decoration: underline;
+    }
+
+    /* İçerik Bölümleri */
+    .doc-section {
+      margin-bottom: 44px;
+    }
+    .doc-section:last-child { margin-bottom: 0; }
+
+    .doc-section h2 {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .doc-section h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .doc-section h3 {
+      margin: 22px 0 10px;
+      color: var(--ink);
+      font-size: 1.05rem;
+      font-weight: 750;
+    }
+
+    .doc-section p {
+      margin: 0 0 14px;
+      color: var(--ink-soft);
+      font-size: .98rem;
+    }
+
+    .doc-section ul {
+      margin: 0 0 18px;
+      padding-left: 22px;
+      color: var(--ink-soft);
+      font-size: .98rem;
+    }
+    .doc-section li {
+      margin-bottom: 8px;
+    }
+
+    /* Özel Vurgu / İletişim Kutuları */
+    .callout-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #3b82f6;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .callout-box p { margin: 0; }
+
+    .contact-highlight {
+      background: #fdfbf7;
+      border: 1px solid rgba(231, 196, 91, 0.4);
+      border-radius: 14px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .contact-highlight a {
+      color: var(--navy);
+      font-weight: 750;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ==========================================================================
+       SITE FOOTER (Kurumsal 3 Sütunlu Yapı)
+       ========================================================================== */
+    .site-footer {
+      background: var(--navy-deep);
+      color: #ffffff;
+      padding: 60px clamp(16px, 4vw, 56px) 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+    .footer-top-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-brand-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: #ffffff;
+      margin: 0 0 10px;
+      display: inline-block;
+    }
+    .footer-brand-col p {
+      color: rgba(255,255,255,.65);
+      font-size: .88rem;
+      line-height: 1.65;
+      margin: 0 0 20px;
+      max-width: 320px;
+    }
+    .footer-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--gold);
+      font-size: .84rem;
+      font-weight: 700;
+    }
+    .footer-back-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+    .footer-col-title {
+      font-size: .82rem;
+      font-weight: 750;
+      color: rgba(255,255,255,.9);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin: 0 0 18px;
+    }
+    .footer-links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links-list a {
+      color: rgba(255,255,255,.68);
+      font-size: .86rem;
+      transition: color .2s ease;
+    }
+    .footer-links-list a:hover {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .footer-bottom-copyright {
+      padding-top: 30px;
+      text-align: center;
+      font-size: .84rem;
+      color: rgba(255,255,255,.5);
+    }
+
+    /* Dil Paneli Görünürlük Kontrolü */
+    .lang-panel { display: none; }
+    .lang-panel.is-active { display: block; }
+
+    @media (max-width: 768px) {
+      .doc-toc ol { grid-template-columns: 1fr; }
+      .footer-top-grid { grid-template-columns: 1fr; gap: 32px; }
+      .contact-highlight { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body>
 
-    <h1>WordLegend Privacy Policy</h1>
-    <p class="last-updated">Effective Date: January 01, 2026</p>
-    <p class="last-updated">Last Updated: April 01, 2026</p>
-    <p class="last-updated">Owner: littleGenius (email: geniusmetaverse@gmail.com)</p>
+  <!-- ==========================================================================
+       SABİT ÜST BAR (littleGENIUS & WordLegend Gezintisi)
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="brand-group">
+      <!-- 1. En solda Sarı "Geri" Butonu: Her zaman Ana Platform littleGENIUS -->
+      <a class="back-btn" href="../" aria-label="littleGENIUS Ana Platformuna Dön">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        <span>littleGENIUS</span>
+      </a>
 
-    <section>
-        <h2>1. Introduction</h2>
-        <p>We value your privacy at WordLegend. WordLegend ("Application") is a mobile word game designed to improve your vocabulary. This Privacy Policy explains how your personal data is collected, used, protected, and shared while using the application. By using the application, you acknowledge that you have read and accepted this Privacy Policy.</p>
-    </section>
+      <!-- Ayırıcı İnce Çizgi -->
+      <div class="brand-divider" aria-hidden="true"></div>
 
-    <section>
-        <h2>2. Data Collected</h2>
-        <h3>Personal Data</h3>
-        <ul>
-            <li>When signing in with Firebase Authentication: User ID (UID), email address (optional)</li>
-            <li>Game progress: Level, number of solved words, streak, badges</li>
-            <li>Played words (to avoid repetition)</li>
-        </ul>
-        <h3>Automatically Collected Data</h3>
-        <ul>
-            <li>Device information (model, operating system version)</li>
-            <li>Application usage statistics (Analytics)</li>
-        </ul>
-    </section>
+      <!-- 2. Hemen Yanında Beyaz Font ile Ürün Linki: WordLegend index.html Sayfasına Yönlendirir -->
+      <a class="app-brand-link" href="./" id="backToAppBtn" aria-label="WordLegend Ana Sayfasına Dön">
+        <span id="backToAppText">WORDLEGEND</span>
+      </a>
+    </div>
 
-    <section>
-        <h2>3. Use of Data</h2>
-        <ul>
-            <li>Ensure smooth operation of the game.</li>
-            <li>Save your progress and badges.</li>
-            <li>Provide a personalized gaming experience.</li>
-            <li>Develop in-app improvements and new features.</li>
-            <li>Fulfill legal obligations.</li>
-            <li>Provide support and communication.</li>
-        </ul>
-    </section>
+    <div class="header-right">
+      <div class="language-switch" aria-label="Dil / Language">
+        <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
 
-    <section>
-        <h2>4. Data Sharing and Transfers</h2>
-        <ul>
-            <li>Your data is not shared with third parties for marketing purposes.</li>
-            <li>Limited sharing is only with technical service providers (Google Cloud, Firebase, RevenueCat).</li>
-            <li>International transfers: Data may be processed on Google servers in the USA. These transfers are protected under GDPR Standard Contractual Clauses and other approved mechanisms.</li>
-            <li>Data may be disclosed if legally required (court order, regulatory request).</li>
-        </ul>
-    </section>
+  <main class="doc-page">
+    <div class="doc-container">
 
-    <section>
-        <h2>5. Data Retention Periods</h2>
-        <ul>
-            <li>Usage/analytics data: Retained up to 24 months (longer if anonymized).</li>
-            <li>Payment metadata: 10 years (for tax compliance).</li>
-            <li>Support requests: Retained for 1 year after resolution.</li>
-        </ul>
-    </section>
+      <!-- ====================================================================
+           TÜRKÇE İÇERİK PANELİ (TR)
+           ==================================================================== -->
+      <div class="lang-panel is-active" id="panel-tr">
+        <div class="doc-header">
+          <div class="doc-badge">GİZLİLİK POLİTİKASI</div>
+          <h1>WordLegend Gizlilik Politikası</h1>
+          <div class="doc-meta">
+            <span class="doc-meta-item">Yürürlük: <strong>01 Ocak 2026</strong></span>
+            <span class="doc-meta-item">Son Güncelleme: <strong>01 Nisan 2026</strong></span>
+            <span class="doc-meta-item">Geliştirici: <strong>littleGenius</strong></span>
+          </div>
+        </div>
 
-    <section>
-        <h2>6. Data Security</h2>
-        <p>Technical and administrative measures such as encryption, access control, and regular security testing are applied in line with industry standards. However, it is important to note that no transmission over the internet is completely risk-free.</p>
-    </section>
+        <nav class="doc-toc">
+          <h3>İçindekiler</h3>
+          <ol>
+            <li><a href="#tr-1">Giriş</a></li>
+            <li><a href="#tr-2">Toplanan Veriler</a></li>
+            <li><a href="#tr-3">Verilerin Kullanımı</a></li>
+            <li><a href="#tr-4">Veri Paylaşımı & Aktarım</a></li>
+            <li><a href="#tr-5">Veri Saklama Süresi</a></li>
+            <li><a href="#tr-6">Veri Güvenliği</a></li>
+            <li><a href="#tr-7">Kullanıcı Hakları (KVKK & GDPR)</a></li>
+            <li><a href="#tr-8">Çocukların Gizliliği</a></li>
+            <li><a href="#tr-9">Politika Değişiklikleri</a></li>
+            <li><a href="#tr-10">İletişim</a></li>
+          </ol>
+        </nav>
 
-    <section>
-        <h2>7. User Rights (GDPR Articles 15–22)</h2>
-        <ul>
-            <li>Right to access and request information about your personal data.</li>
-            <li>Right to request correction of inaccurate or incomplete data.</li>
-            <li>Right to request deletion or anonymization of your data (“right to be forgotten”).</li>
-            <li>Right to object to or request restriction of processing.</li>
-            <li>Right to data portability (receive your data in a structured format).</li>
-            <li>Right to object to automated decision-making (including AI processing where applicable).</li>
-        </ul>
-        <p>To exercise your rights, you can contact us at: <strong>geniusmetaverse@gmail.com</strong>. Identity verification may be required.</p>
-    </section>
+        <section class="doc-section" id="tr-1">
+          <h2>1. Giriş</h2>
+          <p>WordLegend’da gizliliğinize değer veriyoruz. WordLegend ("Uygulama"), kelime dağarcığınızı geliştirmek ve zihinsel bilişsel becerilerinizi desteklemek amacıyla tasarlanmış bir mobil kelime oyunudur. Bu Gizlilik Politikası, uygulamayı kullanırken kişisel verilerinizin nasıl toplandığını, kullanıldığını, korunduğunu ve paylaşıldığını açıklar.</p>
+          <p>Uygulamayı kullanarak bu Gizlilik Politikasını okuduğunuzu ve şartları kabul ettiğinizi beyan etmiş olursunuz.</p>
+        </section>
 
-    <section>
-        <h2>8. Children’s Privacy</h2>
-        <p>The application is designed for users aged 16 and above. Data is not knowingly collected from children under 16. If such data is detected, it will be deleted immediately.</p>
-    </section>
+        <section class="doc-section" id="tr-2">
+          <h2>2. Toplanan Veriler</h2>
+          <h3>Kişisel Veriler</h3>
+          <ul>
+            <li><strong>Firebase Authentication ile giriş yapıldığında:</strong> Kullanıcı kimliği (UID), e-posta adresi (opsiyonel).</li>
+            <li><strong>Oyun ilerlemesi:</strong> Seviye, çözülen kelime sayısı, seri (streak), başarı rozetleri ve istatistikler.</li>
+            <li><strong>Oynanmış kelimeler:</strong> Tekrar etmemesi ve sözlük algoritmalarının doğru işlemesi için tutulur.</li>
+          </ul>
+          <h3>Otomatik Olarak Toplanan Teknik Veriler</h3>
+          <ul>
+            <li>Cihaz bilgileri (model, işletim sistemi versiyonu, donanım kimliği).</li>
+            <li>Uygulama kullanımı ve performans istatistikleri (Google Analytics for Firebase).</li>
+            <li>Hata raporları ve çökme günlükleri (Firebase Crashlytics).</li>
+          </ul>
+        </section>
 
-    <section>
-        <h2>9. Policy Changes</h2>
-        <p>This Policy may be updated from time to time. Significant changes will be announced via in-app notifications, email, or application updates. Continued use of the application after changes means you accept the updated Policy.</p>
-    </section>
+        <section class="doc-section" id="tr-3">
+          <h2>3. Verilerin Kullanımı</h2>
+          <p>Toplanan veriler yalnızca şu amaçlarla işlenir:</p>
+          <ul>
+            <li>Oyunun sorunsuz ve kesintisiz çalışmasını sağlamak.</li>
+            <li>İlerleme, başarı rozetleri ve ayarlarınızı bulut senkronizasyonuyla kaydetmek.</li>
+            <li>Kişiselleştirilmiş bir oyun ve sözlük deneyimi sunmak.</li>
+            <li>Uygulama içi kararlılık, iyileştirme ve yeni özellikler geliştirmek.</li>
+            <li>Yasal yükümlülükleri eksiksiz yerine getirmek.</li>
+            <li>Destek taleplerinize hızlı dönüş ve müşteri iletişimi sağlamak.</li>
+          </ul>
+        </section>
 
-    <section>
-        <h2>10. Contact</h2>
-        <p>For questions, rights requests, or complaints, you can contact us:</p>
-        <p><strong>Email:</strong> geniusmetaverse@gmail.com</p>
-    </section>
+        <section class="doc-section" id="tr-4">
+          <h2>4. Veri Paylaşımı ve Üçüncü Taraflar</h2>
+          <p>Kişisel verileriniz hiçbir koşulda üçüncü şahıslara veya kurumlara satılmaz. Verileriniz yalnızca hizmet kalitesini sağlamak adına sektör standardı güvenilir altyapı sağlayıcıları ile paylaşılabilir:</p>
+          <ul>
+            <li><strong>Google Firebase:</strong> Kimlik doğrulama, Firestore veritabanı, Crashlytics hata takibi ve Analytics analizleri.</li>
+            <li><strong>Google AdMob:</strong> Reklam gösterimi ve reklam performans ölçümü (kişiselleştirilmiş reklam tercihlerine uygun olarak).</li>
+            <li><strong>Google Play & App Store Altyapısı:</strong> Uygulama içi satın alımlar (In-App Purchases) doğrudan platformlarca güvenle yönetilir; kredi kartı bilgileriniz sunucularımızda asla saklanmaz.</li>
+          </ul>
+        </section>
 
-    <footer style="text-align:center; margin-top:60px; color:#888; font-size:0.9rem;">
-        <p>WordLegend © 2026 - All Rights Reserved.</p>
-    </footer>
+        <section class="doc-section" id="tr-5">
+          <h2>5. Veri Saklama Süreleri</h2>
+          <p>Kullanıcı verileri, kullanıcı hesabı aktif olduğu müddetçe saklanır. Hesap silme talebinde bulunulduğunda kişisel verileriniz <strong>30 gün</strong> içerisinde sunucularımızdan kalıcı olarak silinir veya anonim hale getirilir.</p>
+        </section>
 
+        <section class="doc-section" id="tr-6">
+          <h2>6. Veri Güvenliği</h2>
+          <p>Verileriniz Google Cloud altyapısında SSL/TLS şifreleme protokolleriyle korunur. Veri tabanlarına yetkisiz erişimi engellemek için Firebase Güvenlik Kuralları (Security Rules) ve modern güvenlik standartları titizlikle uygulanır.</p>
+        </section>
+
+        <section class="doc-section" id="tr-7">
+          <h2>7. Kullanıcı Hakları (KVKK & GDPR)</h2>
+          <p>Kullanıcılarımız 6698 sayılı KVKK ve Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) kapsamında şu haklara sahiptir:</p>
+          <ul>
+            <li>Verilerinin işlenip işlenmediğini öğrenme ve bilgi talep etme,</li>
+            <li>Hatalı veya eksik verilerin düzeltilmesini isteme,</li>
+            <li>Verilerin silinmesini (Unutulma Hakkı) veya yok edilmesini talep etme,</li>
+            <li>Veri aktarımını talep etme (Data Portability),</li>
+            <li>İtiraz etme ve yasal mercilere şikayette bulunma.</li>
+          </ul>
+          <div class="callout-box">
+            <p>Taleplerinizi iletmek veya hesabınızı tamamen sildirmek için <a href="mailto:geniusmetaverse@gmail.com"><strong>geniusmetaverse@gmail.com</strong></a> adresine e-posta gönderebilirsiniz.</p>
+          </div>
+        </section>
+
+        <section class="doc-section" id="tr-8">
+          <h2>8. Çocukların Gizliliği (COPPA)</h2>
+          <p>WordLegend genel kitleye hitap eden bir bulmaca oyunudur. 13 yaşın (veya bulunduğunuz ülkedeki yasal yaş sınırının) altındaki çocuklardan bilerek kişisel veri toplamıyoruz. Eğer bir çocuğun bize kişisel veri sağladığını fark ederseniz lütfen derhal bizimle iletişime geçin; gerekli kayıtlar süratle silinecektir.</p>
+        </section>
+
+        <section class="doc-section" id="tr-9">
+          <h2>9. Politika Değişiklikleri</h2>
+          <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Değişiklikler bu sayfada "Son Güncelleme" tarihi revize edilerek yayınlanır. Önemli değişiklikler uygulama içerisinden duyurulur.</p>
+        </section>
+
+        <section class="doc-section" id="tr-10">
+          <h2>10. İletişim</h2>
+          <p>Gizlilik Politikamızla ilgili her türlü soru, görüş ve veri silme talebiniz için:</p>
+          <div class="contact-highlight">
+            <div>
+              <strong>littleGenius Stüdyosu</strong><br>
+              E-posta: <a href="mailto:geniusmetaverse@gmail.com">geniusmetaverse@gmail.com</a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ====================================================================
+           İNGİLİZCE İÇERİK PANELİ (EN)
+           ==================================================================== -->
+      <div class="lang-panel" id="panel-en">
+        <div class="doc-header">
+          <div class="doc-badge">PRIVACY POLICY</div>
+          <h1>WordLegend Privacy Policy</h1>
+          <div class="doc-meta">
+            <span class="doc-meta-item">Effective Date: <strong>January 01, 2026</strong></span>
+            <span class="doc-meta-item">Last Updated: <strong>April 01, 2026</strong></span>
+            <span class="doc-meta-item">Owner: <strong>littleGenius</strong></span>
+          </div>
+        </div>
+
+        <nav class="doc-toc">
+          <h3>Table of Contents</h3>
+          <ol>
+            <li><a href="#en-1">Introduction</a></li>
+            <li><a href="#en-2">Data Collected</a></li>
+            <li><a href="#en-3">Use of Data</a></li>
+            <li><a href="#en-4">Data Sharing and Transfers</a></li>
+            <li><a href="#en-5">Data Retention Periods</a></li>
+            <li><a href="#en-6">Data Security</a></li>
+            <li><a href="#en-7">User Rights (GDPR & International)</a></li>
+            <li><a href="#en-8">Children’s Privacy</a></li>
+            <li><a href="#en-9">Policy Changes</a></li>
+            <li><a href="#en-10">Contact Us</a></li>
+          </ol>
+        </nav>
+
+        <section class="doc-section" id="en-1">
+          <h2>1. Introduction</h2>
+          <p>We value your privacy at WordLegend. WordLegend ("Application") is a mobile word puzzle game designed to enhance your vocabulary and exercise cognitive skills. This Privacy Policy describes how we collect, use, protect, and share your personal data when you interact with our application.</p>
+          <p>By using the Application, you declare that you have read and agreed to the practices outlined in this Privacy Policy.</p>
+        </section>
+
+        <section class="doc-section" id="en-2">
+          <h2>2. Data Collected</h2>
+          <h3>Personal Data</h3>
+          <ul>
+            <li><strong>When signed in with Firebase Authentication:</strong> User Unique Identifier (UID), optional email address.</li>
+            <li><strong>Game Progress:</strong> Levels achieved, words solved, winning streaks, earned badges, and performance statistics.</li>
+            <li><strong>Played Words Cache:</strong> Kept to prevent repetitive puzzles and ensure optimal puzzle generation.</li>
+          </ul>
+          <h3>Automatically Collected Technical Data</h3>
+          <ul>
+            <li>Device information (hardware model, operating system version, unique device tokens).</li>
+            <li>Usage metrics and interaction frequency (Google Analytics for Firebase).</li>
+            <li>Crash reports and operational diagnostic logs (Firebase Crashlytics).</li>
+          </ul>
+        </section>
+
+        <section class="doc-section" id="en-3">
+          <h2>3. Use of Data</h2>
+          <p>We process collected information strictly for the following purposes:</p>
+          <ul>
+            <li>Delivering an optimal, uninterrupted gameplay experience.</li>
+            <li>Syncing your game progress, badges, and preferences securely across sessions.</li>
+            <li>Providing personalized vocabulary suggestions and difficulty tuning.</li>
+            <li>Troubleshooting technical bugs and introducing new game features.</li>
+            <li>Complying with applicable legal and statutory requirements.</li>
+            <li>Providing responsive player support and inquiries follow-up.</li>
+          </ul>
+        </section>
+
+        <section class="doc-section" id="en-4">
+          <h2>4. Data Sharing and Third-Party Services</h2>
+          <p>We never sell your personal data. We only partner with recognized, secure third-party infrastructure providers:</p>
+          <ul>
+            <li><strong>Google Firebase:</strong> User authentication, Firestore cloud database, Crashlytics diagnostics, and Firebase Analytics.</li>
+            <li><strong>Google AdMob:</strong> Advertisement display and ad interaction metrics, respecting your personalized advertising preferences.</li>
+            <li><strong>Apple App Store & Google Play:</strong> In-app purchases are handled directly by platform providers; payment details are never processed or stored on our servers.</li>
+          </ul>
+        </section>
+
+        <section class="doc-section" id="en-5">
+          <h2>5. Data Retention Periods</h2>
+          <p>Your user profile and game data are retained as long as your account remains active. Upon receipt of an account deletion request, personal records are permanently erased or anonymized within <strong>30 days</strong>.</p>
+        </section>
+
+        <section class="doc-section" id="en-6">
+          <h2>6. Data Security</h2>
+          <p>Data transmission is safeguarded through SSL/TLS encryption. We enforce Firebase Security Rules and best engineering practices to prevent unauthorized access, alteration, or disclosure of player information.</p>
+        </section>
+
+        <section class="doc-section" id="en-7">
+          <h2>7. User Rights (GDPR & International Laws)</h2>
+          <p>Under the General Data Protection Regulation (GDPR) and global privacy regulations, you are entitled to:</p>
+          <ul>
+            <li>Access and receive confirmation regarding your processed data,</li>
+            <li>Request rectification of inaccurate or incomplete personal information,</li>
+            <li>Request permanent erasure of your data ("Right to be Forgotten"),</li>
+            <li>Request data portability in a machine-readable format,</li>
+            <li>Object to or restrict specific processing operations.</li>
+          </ul>
+          <div class="callout-box">
+            <p>To exercise any of these rights or request immediate account deletion, contact us directly at <a href="mailto:geniusmetaverse@gmail.com"><strong>geniusmetaverse@gmail.com</strong></a>.</p>
+          </div>
+        </section>
+
+        <section class="doc-section" id="en-8">
+          <h2>8. Children’s Privacy (COPPA)</h2>
+          <p>WordLegend is suitable for a general audience. We do not knowingly collect personal information from children under the age of 13 (or under applicable regional statutory age limits). If you discover that a child has supplied us with personal data without parental consent, please contact us promptly to have the record deleted.</p>
+        </section>
+
+        <section class="doc-section" id="en-9">
+          <h2>9. Policy Changes</h2>
+          <p>We may periodically update this Privacy Policy. Any modifications will be posted here with a refreshed "Last Updated" date. Meaningful amendments will be highlighted inside the application.</p>
+        </section>
+
+        <section class="doc-section" id="en-10">
+          <h2>10. Contact Us</h2>
+          <p>For questions, privacy inquiries, or data erasure requests, please contact:</p>
+          <div class="contact-highlight">
+            <div>
+              <strong>littleGenius Studio</strong><br>
+              Email: <a href="mailto:geniusmetaverse@gmail.com">geniusmetaverse@gmail.com</a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER (Kurumsal 3 Sütunlu Yapı)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top-grid">
+        <!-- 1. Kolon: Marka Tanıtımı -->
+        <div class="footer-brand-col">
+          <span class="footer-brand-title">littleGENIUS</span>
+          <p id="footerBrandText">Fikirleri gerçeğe dönüştüren bağımsız dijital stüdyo. Özgün mobil oyunlar ve yaratıcı dijital deneyimler.</p>
+          <a class="footer-back-link" href="../">
+            <span>← littleGENIUS Ana Sayfa</span>
+          </a>
+        </div>
+
+        <!-- 2. Kolon: WordLegend Menüsü -->
+        <div>
+          <h4 class="footer-col-title" id="footerColPages">Sayfalar</h4>
+          <ul class="footer-links-list">
+            <li><a href="./#how-to-play" id="footNavHow">Nasıl Oynanır</a></li>
+            <li><a href="./#features" id="footNavFeatures">Özellikler</a></li>
+            <li><a href="./#modes" id="footNavModes">Paketler & Modlar</a></li>
+            <li><a href="./#contact" id="footNavContact">İletişim</a></li>
+            <li><a href="./#download" id="footNavDownload">Oyunu İndir</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Kolon: Yasal Belgeler -->
+        <div>
+          <h4 class="footer-col-title" id="footerColLegal">Yasal</h4>
+          <ul class="footer-links-list">
+            <li><a href="faq.html" id="footLinkFaq">Sıkça Sorulan Sorular (SSS)</a></li>
+            <li><a href="terms-of-service.html" id="footLinkTos">Kullanım Koşulları (TOS)</a></li>
+            <li><a href="privacy-policy.html" style="color:var(--gold); font-weight:700;" id="footLinkPp">Gizlilik Politikası (PP)</a></li>
+            <li><a href="support.html" id="footLinkSupport">Destek & İletişim</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-copyright">
+        Copyright © 2026, a product of littleGenius
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       AKILLI DİL YÖNETİM SCRİPTİ (Otomatik Algılama + Senkronizasyon)
+       ========================================================================== -->
+  <script>
+    const uiTranslations = {
+      tr: {
+        pageTitle: "WordLegend - Gizlilik Politikası · littleGENIUS",
+        metaDesc: "WordLegend Gizlilik Politikası: Kişisel verilerinizin nasıl toplandığı, kullanıldığı, korunduğu ve KVKK/GDPR haklarınız hakkında detaylı bilgilendirme.",
+        backToApp: "WORDLEGEND",
+        footerBrand: "Fikirleri gerçeğe dönüştüren bağımsız dijital stüdyo. Özgün mobil oyunlar ve yaratıcı dijital deneyimler.",
+        colPages: "Sayfalar",
+        colLegal: "Yasal",
+        navHow: "Nasıl Oynanır",
+        navFeatures: "Özellikler",
+        navModes: "Paketler & Modlar",
+        navContact: "İletişim",
+        navDownload: "Oyunu İndir",
+        linkFaq: "Sıkça Sorulan Sorular (SSS)",
+        linkTos: "Kullanım Koşulları (TOS)",
+        linkPp: "Gizlilik Politikası (PP)",
+        linkSupport: "Destek & İletişim"
+      },
+      en: {
+        pageTitle: "WordLegend - Privacy Policy · littleGENIUS",
+        metaDesc: "WordLegend Privacy Policy: Learn how your personal data is collected, used, protected, and your rights under GDPR and international privacy laws.",
+        backToApp: "WORDLEGEND",
+        footerBrand: "An independent digital studio turning ideas into reality. Original mobile games and creative digital experiences.",
+        colPages: "Pages",
+        colLegal: "Legal",
+        navHow: "How to Play",
+        navFeatures: "Features",
+        navModes: "Packs & Modes",
+        navContact: "Contact Us",
+        navDownload: "Play Now",
+        linkFaq: "Frequently Asked Questions (FAQ)",
+        linkTos: "Terms of Service (TOS)",
+        linkPp: "Privacy Policy (PP)",
+        linkSupport: "Support & Contact"
+      }
+    };
+
+    function setLanguage(activeLang) {
+      document.documentElement.lang = activeLang;
+
+      // Panelleri Aç/Kapat
+      document.getElementById("panel-tr").classList.toggle("is-active", activeLang === "tr");
+      document.getElementById("panel-en").classList.toggle("is-active", activeLang === "en");
+
+      // Butonları Güncelle
+      document.querySelectorAll("[data-lang]").forEach(btn => {
+        btn.setAttribute("aria-pressed", String(btn.dataset.lang === activeLang));
+      });
+
+      // Başlık ve Meta Güncelle
+      document.getElementById("pageTitle").textContent = uiTranslations[activeLang].pageTitle;
+      document.getElementById("pageMetaDesc").setAttribute("content", uiTranslations[activeLang].metaDesc);
+      document.getElementById("backToAppText").textContent = uiTranslations[activeLang].backToApp;
+
+      // Footer Metinlerini Güncelle
+      document.getElementById("footerBrandText").textContent = uiTranslations[activeLang].footerBrand;
+      document.getElementById("footerColPages").textContent = uiTranslations[activeLang].colPages;
+      document.getElementById("footerColLegal").textContent = uiTranslations[activeLang].colLegal;
+      document.getElementById("footNavHow").textContent = uiTranslations[activeLang].navHow;
+      document.getElementById("footNavFeatures").textContent = uiTranslations[activeLang].navFeatures;
+      document.getElementById("footNavModes").textContent = uiTranslations[activeLang].navModes;
+      document.getElementById("footNavContact").textContent = uiTranslations[activeLang].navContact;
+      document.getElementById("footNavDownload").textContent = uiTranslations[activeLang].navDownload;
+      document.getElementById("footLinkFaq").textContent = uiTranslations[activeLang].linkFaq;
+      document.getElementById("footLinkTos").textContent = uiTranslations[activeLang].linkTos;
+      document.getElementById("footLinkPp").textContent = uiTranslations[activeLang].linkPp;
+      document.getElementById("footLinkSupport").textContent = uiTranslations[activeLang].linkSupport;
+
+      // Seçili dille alt linkleri parametreli tut
+      if (document.getElementById("footLinkFaq")) document.getElementById("footLinkFaq").href = `faq.html?lang=${activeLang}`;
+      if (document.getElementById("footLinkTos")) document.getElementById("footLinkTos").href = `terms-of-service.html?lang=${activeLang}`;
+      if (document.getElementById("backToAppBtn")) document.getElementById("backToAppBtn").href = `./?lang=${activeLang}`;
+
+      // LocalStorage'a kaydet (Ana siteyle senkron)
+      try {
+        localStorage.setItem("littleGENIUSLanguage", activeLang);
+      } catch (e) {}
+    }
+
+    // Dil Butonlarına Tıklama Olayı
+    document.querySelectorAll("[data-lang]").forEach(btn => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+    });
+
+    // Otomatik Başlangıç Dili Belirleme Mantığı
+    function initLanguage() {
+      // 1. URL Parametresi Kontrolü (?lang=en veya ?lang=tr) -> App Store/Google Play inceleyicileri için
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get("lang");
+      if (urlLang === "en" || urlLang === "tr") {
+        setLanguage(urlLang);
+        return;
+      }
+
+      // 2. LocalStorage Kontrolü (Ziyaretçinin sitede daha önce seçtiği dil)
+      try {
+        const storedLang = localStorage.getItem("littleGENIUSLanguage");
+        if (storedLang === "en" || storedLang === "tr") {
+          setLanguage(storedLang);
+          return;
+        }
+      } catch (e) {}
+
+      // 3. Tarayıcı Dili Kontrolü
+      const browserLang = (navigator.language || navigator.userLanguage || "tr").toLowerCase();
+      if (browserLang.startsWith("tr")) {
+        setLanguage("tr");
+      } else {
+        setLanguage("en");
+      }
+    }
+
+    initLanguage();
+  </script>
 </body>
 </html>
